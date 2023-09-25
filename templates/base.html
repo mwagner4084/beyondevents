@@ -1,0 +1,83 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-family-base">
+    <header class="site-header" role="banner">
+        <nav class="navbar navbar-expand-lg justify-content-lg-between">
+            <div class="container justify-content-lg-between">
+                    {% comment %} <a class="navbar-brand lead text-primary d-inline-block py-3" href="{% url 'home' %}">
+                        <img class="img-fluid img-limit-height site-logo" src="{% static 'img/vcc-logo.png' %}" alt="The Village Childcare Center Logo" width="300" height="200">
+                    </a> {% endcomment %}
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarToggler">
+                    <div class="navbar-nav text-center">
+                        <a href="{% url 'about' %}" class="nav-link">
+                                Meet the Owner
+                        </a>
+                        <a href="{% url 'pricing'%}" class="nav-link">
+                                Price Guide
+                        </a>
+                        <a href="{% url 'testimonials'%}" class="nav-link">
+                                Testimonials
+                        </a>
+                        <a href="{% url 'contact'%}" class="nav-link">
+                                Contact
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="site-main bg-eggshell" role="main">
+
+            {% block content %}
+            {% endblock content %}
+
+
+            <footer class="py-3 px-3">
+                <div class="d-lg-flex justify-content-between">
+                    <div>
+                        <small>5320 Holiday Terrace, Suite 4 Kalamazoo, MI 49009</small>
+                    </div>
+                    <div>
+                        <small>(269) 365-0808</small>
+                    </div>
+                    <div>
+                        <small>&copy; The Village Childcare Center, {% now "Y" %}. All rights reserved.</small>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- JQuery JS Bundle -->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+        </script>
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+        </script>
+        {% comment %} <script src="{% static 'js/base.js'%}"> {% endcomment %}
+        </script>
+
+    </body>
+</html>

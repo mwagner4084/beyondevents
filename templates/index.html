@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load my_templatetags %}
+
+{% block content %}
+
+<div class="template-home">
+    <div class="container py-5">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-auto text-center pb-4">
+                {% heading title=page.title default="Beyond Events" %}
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-md-start">
+            <div class="col-12 col-md-6 py-3">
+                <div class="rte">
+                    {% comment %} {% if page.content %}
+                        {{ page.content | safe }}
+                    {% else %} {% endcomment %}
+                    
+                    <p>
+                        Your wedding is a once-in-a-lifetime event, and we're here to ensure it's as magical as you've always dreamed. With over 200 events planned worldwide, including 75+ weddings since 2022, we bring a wealth of experience and a keen eye for detail to your special day.
+                    </p>
+                    <p>
+                        Our founder, Ryan, began his event planning journey in college, where he hosted gala events to promote New England artists. His career took him to the high seas as a Chief Steward on super yachts, planning unforgettable experiences for guests in 15 countries. Now, he's back in the beautiful Midwest, ready to help you plan your perfect wedding.
+                    </p>    
+                    {% comment %} {% endif %} {% endcomment %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="rte py-3">
+                    {% comment %} {% if page.content_secondary %}
+                        {{ page.content_secondary | safe }}
+                    {% else %}
+                    {% endcomment %}
+                    <img src="{% static 'img/table.jpg' %}" class="img-fluid rounded-circle" alt="table">
+                    {% comment %} 
+                    <h3>
+                        Learn more about our...
+                    <p>
+                        <i class="bi bi-rainbow"></i>
+                        <a href="{% url 'pricing' %}">
+                            Packages Offered
+                        </a>
+                        <br>
+                        <i class="bi bi-boxes"></i>
+                        <a href="{% url 'about' %}">
+                            Owner and Coordinator
+                        </a>
+                        <br>
+                        <i class="bi bi-shop"></i>
+                        <a href="{% url 'testimonials' %}">
+                            Testimonials
+                        </a>
+                        <br>
+                    </p>
+                    {% endif %}
+                    <div class="justify-content-md-start pt-3">
+                        <h5 class="text-start pb-3">
+                            Request more information below or visit our <a href ="{% url 'contact'%}">contact page</a> to schedule a meeting.
+                        </h5>
+                        {% crispy form %} {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
