@@ -7,3 +7,8 @@ pages/__pycache__/
 staticfiles/
 media/
 .venv/
+.vscode/
+django_project/__pycache__/
+*.pyc
+.pyc
+```
