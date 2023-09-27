@@ -5,15 +5,16 @@
 
 {% block content %}
 
-<div class="template-about">
+<div class="template-about bg-white">
     <div class="container py-3">
-        <div class="row justify-content-md-center d-flex align-items-stretch mb-3">
+        <div class="row justify-content-md-center  mb-3">
             <div class="col-12 col-md-4 mx-auto">
-                <div class="card border-dark h-100 my-3">
-                    <div class="card-body">
-                        <h1 class="card-title">
-                            <strong>A little background...</strong>
-                        </h1>
+                <div class="card border-dark h-100 my-3 slide-in-top">
+                    <div class="card-body bg-blue-gray">
+                        <h2 class="h1 card-title">
+                            <strong>Background</strong>
+                        </h2>
+                        <hr>
                         <p class="card-text">
                             As we embark on the journey of planning your wedding, we'll also be building a wonderful friendship! But before we dive in, allow me to share a bit about my background. My passion for event planning ignited during my college years when I founded an Art Gallery and served as a chair member of the Providence Art Association. I found joy in hosting gala events to spotlight artists from New England. 
                         </p>
@@ -23,35 +24,44 @@
                             Since settling on land in 2022, I've planned over 75 weddings and private events, contributing to my overall tally of more than 200 events worldwide.
                         </p>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mx-auto">
-                <div class="card border-dark h-100 my-3">
-                    <img src="{% static 'img/headshot.png'%}" class="card-img-top" alt="Ryan Bergstrom">                        <div class="card-body">
-                        <h1 class="card-title">
-                            <strong>My promise to you</strong>
-                        </h1>
-                        <p>
-                            As your wedding coordinator, I promise to manage every detail and naviagte any obstacles with utmost precision throughout both the planning stages and on your special day. I promise to provide an enjoyable, stress-free planning journey. I promise to turn the anticipation leading up to your wedding into a fun and exciting experience. 
-                        </p>
-                    </div>
                     {% comment %} <img src="{% static 'img/glass.png'%}" class="card-img-bottom h-80" alt="Cheers"> {% endcomment %}
                 </div>
             </div>
             <div class="col-12 col-md-4 mx-auto">
-                <div class="card border-dark h-100 my-3">
-                    <div class="card-body">
-                        <h1>
-                            <strong>Going above...</strong> 
+                <div class="card border-dark h-100 my-3 slide-in-bottom">
+                    <img src="{% static 'img/headshot.jpg'%}" class="card-img-top" alt="Ryan Bergstrom">                        
+                    <div class="card-body bg-light-gray">
+                        <h1 class="card-title">
+                            <strong>My promise to you</strong>
                         </h1>
+                        <hr>
+                        <p>
+                            As your wedding coordinator, I promise to manage every detail and naviagte any obstacles with utmost precision throughout both the planning stages and on your special day. I promise to provide an enjoyable, stress-free planning journey. I promise to turn the anticipation leading up to your wedding into a fun and exciting experience. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto">
+                <div class="card border-dark h-100 my-3 slide-in-top">
+                    <div class="card-body bg-blue-gray">
+                        <h2 class="h1 card-title">
+                            <strong>Going above...</strong> 
+                        </h2>
+                        <hr>
                         <p>
                             My commitment extends beyond just working with you at every stage of the journey. I will also collaborate closely with your vendors, both the day before and on your wedding day. My aim is to foster a harmonious environment where we all work together to ensure every moment is flawless. By establishing a rapport with each vendor prior to your event, we ensure a comfortable and familiar atmosphere upon arrival, for both you and the entire team.
                         </p>
-                        <h1>
+                        <hr>
+                        <h2 class="h1 card-title">
                             <strong>... and beyond</strong>
-                        </h1>
+                        </h2>
+                        <div class="gallery pt-3">
+                            <img src="{% static 'img/browntable.png'%}" alt="Tableset">
+                            <img src="{% static 'img/redtable.png'%}" alt="Tableset">
+                            <img src="{% static 'img/yacht.png'%}" alt="Tableset">
+                            <img src="{% static 'img/beachtable.png'%}" alt="Tableset">
+                        </div>
                     </div>
-                    <img src="{% static 'img/yacht.png'%}" class="card-img-bottom" alt="Martini">
                 </div>
             </div>
         </div>
