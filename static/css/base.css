@@ -18,11 +18,11 @@
 
 :root {
     --th-color-brown: #916953; 
-    --th-color-white: #fff;
+    --th-color-white: rgba(255, 255, 255, 0.8);
     --th-color-black: #000000;
     --th-color-green: #83B692;
     --th-color-eggshell: #EDD3C4;
-    --th-color-light-gray: #e5e5e5;
+    --th-color-light-gray: rgba(229, 229, 229, 0.5);
     --th-color-blue-gray: #abbdc9;
     
     --heading-font-family: "Alegreya SC", sans-serif;
@@ -31,7 +31,7 @@
 
     --bs-body-font-family: "Alegreya SC", sans-serif;
     --bs-body-font-weight: 400;
-    --bs-body-background-image: url('../static/img/table.png') !important;
+    --bs-body-background-image: url('../img/flowers.jpeg');
     
     --bs-card-border-width: 3px;
 
@@ -293,19 +293,19 @@ header {
 }
 
 .bg-white {
-    background-color: var(--th-color-white) !important;
+    background-color: var(--th-color-white);
 }
 
 .bg-eggshell {
-    background-color: var(--th-color-eggshell) !important;
+    background-color: var(--th-color-eggshell);
 }
 
 .bg-light-gray {
-    background-color: var(--th-color-light-gray) !important;
+    background-color: var(--th-color-light-gray);
 }
 
 .bg-blue-gray {
-    background-color: var(--th-color-blue-gray) !important;
+    background-color: var(--th-color-blue-gray);
 }
 
 h1 {
@@ -333,7 +333,6 @@ card {
     text-align: center;
     border-width: 3px;
     box-shadow: 10px 10px lightblue;
-    /* padding: 1rem 0 1rem 0; */
 }
 
 .border-dark {
@@ -342,6 +341,7 @@ card {
 
 card-body {
     background-color: var(--th-color-white);
+    background-opacity: 0.5;
     display: inline-block;
     flex: none;
     flex-direction: column;
@@ -356,7 +356,6 @@ footer {
     display: in-line;
     background-color: var(--th-color-black) !important;
     color: var(--th-color-white);
-    border-top: 3px solid var(--th-color-white);
     text-transform: uppercase;
     /* padding: 1rem; */
     text-align: center;
