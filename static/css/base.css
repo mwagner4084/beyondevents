@@ -18,11 +18,11 @@
 
 :root {
     --th-color-brown: #916953; 
-    --th-color-white: rgba(255, 255, 255, 0.8);
+    --th-color-white: #FFFFFF;
     --th-color-black: #000000;
     --th-color-green: #83B692;
     --th-color-eggshell: #EDD3C4;
-    --th-color-light-gray: rgba(229, 229, 229, 0.5);
+    --th-color-light-gray: #D9D9D9;
     --th-color-blue-gray: #abbdc9;
     
     --heading-font-family: "Alegreya SC", sans-serif;
@@ -354,17 +354,17 @@ card-body {
 
 footer {
     display: in-line;
-    background-color: var(--th-color-black) !important;
+    background-color: var(--th-color-black);
     color: var(--th-color-white);
     text-transform: uppercase;
     /* padding: 1rem; */
     text-align: center;
-    font-size: calc(0.75rem + 0.25vw) !important;
+    font-size: calc(0.75rem + 0.25vw);
     justify-content: center;
 }
 
 p {
-    font-size: calc(0.8rem + 0.5vw) !important;
+    font-size: calc(0.8rem + 0.5vw);
 }
 
 .img-fluid {
@@ -383,7 +383,7 @@ p {
     grid-area: 1/1;
     justify-self: center;
     align-self: center;
-    width: 100%;
+    width: 90%;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
