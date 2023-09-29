@@ -457,7 +457,7 @@ p {
 }
 
 .bg-img {
-    background-image: url('../img/tableset.jpeg');
+    background-image: url('../img/flowers.jpeg');
     background-color: --th-color-white; /* Used if the image is unavailable */
     /* height: 500px; You must set a specified height */
     background-position: center; /* Center the image */
