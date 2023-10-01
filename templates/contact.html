@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load my_templatetags %}
+
+{% block content %}
+
+<div class="template-contact">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Contact Us</h3>
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="card-body">
+                {% crispy form %}
+            </div>
+            <div class="envelope front"></div>
+            <div class="envelope back"></div>
+        </div>
+        <p class="result-message centered">Thank you for your message</p>
+    </div>
+</div>
+{% endblock content %}
