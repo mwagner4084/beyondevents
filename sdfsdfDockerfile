@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Collect static files
 RUN which python
 
 # Add a comment to invalidate the cache for gunicorn installation, if needed
