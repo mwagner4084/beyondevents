@@ -11,4 +11,3 @@ media/
 django_project/__pycache__/
 *.pyc
 .pyc
-```
