@@ -9,6 +9,7 @@ class Contact(models.Model):
     lname = models.CharField(max_length=254, null=True, blank=True)
     email = models.EmailField(max_length=254, unique=True)
     phone = models.CharField(max_length=254, null=True, blank=True)
+    location = models.CharField(max_length=254, null=True, blank=True)
     wedding_date = models.DateField(auto_now_add=True)
     comments = models.CharField(max_length=500, null=True, blank=True)
     referred_by = models.CharField(max_length=254, null=True, blank=True)

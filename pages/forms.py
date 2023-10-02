@@ -6,6 +6,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     """ Form for the contact page. """
+
     fname = forms.CharField(
         help_text='',
         label='First Name',
@@ -27,6 +28,12 @@ class ContactForm(forms.Form):
     phone = forms.CharField(
         help_text='',
         label='Phone Number',
+        max_length=200,
+        widget=forms.TextInput()
+    )
+    location = forms.CharField(
+        help_text='',
+        label='Location',
         max_length=200,
         widget=forms.TextInput()
     )
@@ -58,8 +65,14 @@ class ContactForm(forms.Form):
             FloatingField('lname'),
             FloatingField('email'),
             FloatingField('phone'),
+            FloatingField('location'),
             FloatingField('wedding_date'),
             FloatingField('comments'),
             FloatingField('referred_by'),
             Submit('submit', 'Submit')
         )
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['title'] = 'Contact Us'
+    #     return context
