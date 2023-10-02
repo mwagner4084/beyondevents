@@ -6,19 +6,46 @@
 {% block content %}
 
 <div class="template-contact">
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h3>Contact Us</h3>
-                <i class="fa fa-envelope"></i>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-12 col-md-6 mx-auto mb-4 mb-md-0 position-relative">
+                <div class="card h-100">
+                    <div class="card-img-overlay mw-100 p-md-0">
+                        <img src="{% static 'img/couple.png' %}" alt="newlyweds" class="card-img opacity-75">
+                    </div>
+                    <div class="position-relative">
+                        <div class="card-header text-white">
+                            <h3>
+                                Ready to plan your dream wedding?
+                            </h3>
+                        </div>
+                        <div class="card-body text-white">
+                            <p class="card-text">
+                                <strong>Complete the form to the right, and I will get back to you as soon as possible.</strong>
+                            </p>
+                            <p class="card-text">
+                                <strong>Be sure to include your wedding date, location, and any other details you would like to share.</strong>
+                            </p>
+                            <p class="card-text">
+                                <strong>I look forward to working with you to make your dreams a reality!</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                {% crispy form %}
+            <div class="col-12 col-md-6 mx-auto mb-4 mb-md-0">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h3>
+                            Let's get started
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        {% crispy form %}
+                    </div>
+                </div>
             </div>
-            <div class="envelope front"></div>
-            <div class="envelope back"></div>
         </div>
-        <p class="result-message centered">Thank you for your message</p>
     </div>
 </div>
 {% endblock content %}
