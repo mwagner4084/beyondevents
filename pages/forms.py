@@ -4,7 +4,7 @@ from crispy_forms.layout import Layout, Submit
 from django import forms
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
     """ Form for the contact page. """
 
     fname = forms.CharField(
