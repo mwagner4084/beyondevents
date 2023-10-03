@@ -343,7 +343,7 @@ p {
   }
   
   .bg-img {
-    background-image: url('../img/flowerbg.png');
+    background-image: url('../img/flower-frame.png');
   background-color: --th-color-white;
   /* Used if the image is unavailable */
   width: 100%;
