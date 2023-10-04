@@ -3,9 +3,23 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
 from django import forms
 
+from .models import Contact
+
 
 class ContactForm(forms.ModelForm):
     """ Form for the contact page. """
+    class Meta:
+        model = Contact
+        fields = (
+            'fname',
+            'lname',
+            'email',
+            'phone',
+            'location',
+            # 'wedding_date',
+            'comments',
+            'referred_by',
+        )
 
     fname = forms.CharField(
         help_text='',
