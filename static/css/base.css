@@ -162,7 +162,7 @@ h1.heading {
 
 .card {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.7)
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card-img {
@@ -249,20 +249,34 @@ footer {
 ul,
 il, 
 p {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1rem + 0.25vw);
 }
   
 .site-main {
   min-height: 90vh;
 }
-  
-.bg-img {
-  background-image: url('../img/flower-bg.png');
-  background-color: --th-color-white;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+@media screen and (min-width: 992px){
+
+  .desktop-img {
+    background-image: url('../img/line-flowers.png');
+    background-color: --th-color-white;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+}
+
+@media screen and (max-width: 992px){
+  .mobile-img {
+    background-image: url('../img/line-flowers-mobile.png');
+    background-color: --th-color-white;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
 }
 
 .bride-img {
