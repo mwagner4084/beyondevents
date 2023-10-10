@@ -259,7 +259,7 @@ p {
 @media screen and (min-width: 992px){
 
   .desktop-img {
-    background-image: url('../img/flwr.png');
+    background-image: url('../img/flwr.jpg');
     background-color: --th-color-white;
     width: 100%;
     background-position: center;
@@ -270,7 +270,7 @@ p {
 
 @media screen and (max-width: 992px){
   .mobile-img {
-    background-image: url('../img/flwr.png');
+    background-image: url('../img/flwr.jpg');
     background-color: --th-color-white;
     width: 100%;
     background-position: center;
