@@ -125,7 +125,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-b31d.up.railway.app']
+    'https://web-production-af58.up.railway.app', 'https://www.beyondeventsllc.com', 'https://beyondeventsllc.com']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = env('EMAIL_HOST')

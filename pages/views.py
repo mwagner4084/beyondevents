@@ -1,6 +1,6 @@
 from django import forms
 from django.conf import settings
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, send_mail
 from django.db import IntegrityError
 from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
@@ -61,13 +61,6 @@ class ContactPageView(TemplateView):
             wedding_date = form.cleaned_data['wedding_date']
             comments = form.cleaned_data['comments']
             referred_by = form.cleaned_data['referred_by']
-            # sender = settings.DEFAULT_FROM_EMAIL
-            # recipients = [email]
-
-            # msg = EmailMessage(from_email=sender, to=recipients)
-            # msg.template_id = settings.SENDGRID_TEMPLATES.get(  # type: ignore
-            #     'tour_request')
-            # msg.send(fail_silently=False)
 
             try:
                 contact_requests = Contact.objects.create(
@@ -82,11 +75,20 @@ class ContactPageView(TemplateView):
                 )
                 contact_requests.save()
 
-                # contact = SendGridContact(email, fname, lname)
-                # sendgrid_add_contacts(
-                #     contacts=[contact],
-                #     list_ids=[settings.SENDGRID_LISTS['tour_request']]
-                # )
+                subject = f'New Contact from {fname} {lname}'
+                message = f'''
+                            First Name: {fname} Last Name: {lname} 
+                            Email: {email}
+                            Phone: {phone}
+                            Location: {location}
+                            Wedding Date: {wedding_date}
+                            Comments: {comments}
+                            Referred By: {referred_by}'''
+                from_email = settings.EMAIL_HOST_USER  # Import this from settings
+                recipient_list = ['mw.devdesign@gmail.com']
+
+                send_mail(subject, message, from_email, recipient_list)
+
             except Exception as e:
                 context = self.get_context_data(**kwargs)
                 error_msg = 'There was an error submitting your request.'
@@ -101,12 +103,6 @@ class ContactPageView(TemplateView):
             context = self.get_context_data(**kwargs)
             context['form'] = form
             return render(request, self.template_name, context)
-
-            # contact = SendGridContact(email, fname, lname)
-            # sendgrid_add_contacts(
-            #     contacts=[contact],
-            #     list_ids=[settings.SENDGRID_LISTS['tour_request']]
-            # )
 
 
 class ConfirmPageView(TemplateView):

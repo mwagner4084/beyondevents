@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load my_templatetags %}
+
+{% block content %}
+
+<div class="template-home">
+    <div class="container mx-md-auto py-3">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-8 mb-4 mb-md-0 text-center">
+                <div class="card border-dark slide-in-left">
+                    <img src="{% static 'img/thanks.png' %}" class="img-fluid" alt="logo">
+                    <div class="card-body">
+                        <h1>
+                            Thank you for contacting Beyond Events!
+                        </h1>
+                        <p>
+                            We'll be in touch soon to discuss your vision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
