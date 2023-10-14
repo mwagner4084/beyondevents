@@ -24,6 +24,7 @@
   --th-color-eggshell: #EDD3C4;
   --th-color-light-gray: #D9D9D9;
   --th-color-blue-gray: #abbdc9;
+  --th-color-lavender: #63477a;
 
   --heading-font-family: "Alegreya SC", sans-serif;
   --heading-font-weight: 900;
@@ -161,7 +162,7 @@ h1.heading {
 
 .card {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-img {
@@ -256,10 +257,22 @@ p {
   min-height: 90vh;
 }
 
+.a-link {
+  text-decoration: underline;
+  color: var(--th-color-lavender);
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--th-color-blue-gray);
+  font-weight: 700;
+}
+
 @media screen and (min-width: 992px){
 
   .desktop-img {
-    background-image: url('../img/flwr.jpg');
+    background-image: url('../img/flwr.png');
     background-color: --th-color-white;
     width: 100%;
     background-position: center;
@@ -270,7 +283,7 @@ p {
 
 @media screen and (max-width: 992px){
   .mobile-img {
-    background-image: url('../img/flwr.jpg');
+    background-image: url('../img/flwr.png');
     background-color: --th-color-white;
     width: 100%;
     background-position: center;
