@@ -13,10 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
 from environs import Env
-
-os.environ.clear()
 
 env = Env()
 env.read_env()
