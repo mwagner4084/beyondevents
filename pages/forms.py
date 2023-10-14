@@ -6,20 +6,20 @@ from django import forms
 from .models import Contact
 
 
-class ContactForm(forms.ModelForm):
+class ContactForm(forms.Form):
     """ Form for the contact page. """
-    class Meta:
-        model = Contact
-        fields = (
-            'fname',
-            'lname',
-            'email',
-            'phone',
-            'location',
-            # 'wedding_date',
-            'comments',
-            'referred_by',
-        )
+    # class Meta:
+    #     model = Contact
+    #     fields = (
+    #         'fname',
+    #         'lname',
+    #         'email',
+    #         'phone',
+    #         'location',
+    #         # 'wedding_date',
+    #         'comments',
+    #         'referred_by',
+    #     )
 
     fname = forms.CharField(
         help_text='',
@@ -86,7 +86,8 @@ class ContactForm(forms.ModelForm):
             Submit('submit', 'Submit')
         )
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['title'] = 'Contact Us'
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Ready to plan your dream wedding?'
+        context['tag'] = ""
+        return context

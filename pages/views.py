@@ -1,3 +1,6 @@
+import smtplib
+from email.mime.text import MIMEText
+
 from django import forms
 from django.conf import settings
 from django.core.mail import EmailMessage, send_mail
@@ -6,7 +9,6 @@ from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from django_project import settings
 from pages.forms import ContactForm
 
 from .models import Contact
@@ -43,15 +45,38 @@ class ContactPageView(TemplateView):
 
         if self.form:
             context['form'] = self.form
+            context['tag'] = "div"
+            context['wrapper_class'] = "form-group"
 
         self.context = context
 
         return context
 
+    def send_custom_email(self, subject, message, from_email, to_email):
+        # Initialize connection
+        smtp_server = smtplib.SMTP('smtp.gmail.com', 587)
+        smtp_server.starttls()
+
+        email_host_user = settings.EMAIL_HOST_USER
+        email_host_password = settings.EMAIL_HOST_PASSWORD
+        smtp_server.login(email_host_user, email_host_password)
+
+        # Create email
+        msg = MIMEText(message)
+        msg['From'] = from_email
+        msg['To'] = ', '.join(to_email)
+        msg['Subject'] = subject
+
+        # Send email
+        smtp_server.sendmail(from_email, to_email, msg.as_string())
+        smtp_server.quit()
+
     def post(self, request: HttpRequest, *args, **kwargs):
         """ Handle the form submission. """
 
         form = ContactForm(request.POST)
+        from_email = settings.EMAIL_HOST_USER
+        to_email = ['ryan@beyondeventsllc.com', 'info@beyondeventsllc.com']
         if form.is_valid():
             fname = form.cleaned_data['fname']
             lname = form.cleaned_data['lname']
@@ -61,6 +86,18 @@ class ContactPageView(TemplateView):
             wedding_date = form.cleaned_data['wedding_date']
             comments = form.cleaned_data['comments']
             referred_by = form.cleaned_data['referred_by']
+
+            from_email = 'ryan@beyondeventsllc.com'
+            to_email = ['ryan@beyondeventsllc.com']
+            subject = f'New Contact from {fname} {lname}'
+            message = f'''
+                        First Name: {fname} Last Name: {lname}
+                        Email: {email}
+                        Phone: {phone}
+                        Location: {location}
+                        Wedding Date: {wedding_date}
+                        Comments: {comments}
+                        Referred By: {referred_by}'''
 
             try:
                 contact_requests = Contact.objects.create(
@@ -75,19 +112,7 @@ class ContactPageView(TemplateView):
                 )
                 contact_requests.save()
 
-                subject = f'New Contact from {fname} {lname}'
-                message = f'''
-                            First Name: {fname} Last Name: {lname} 
-                            Email: {email}
-                            Phone: {phone}
-                            Location: {location}
-                            Wedding Date: {wedding_date}
-                            Comments: {comments}
-                            Referred By: {referred_by}'''
-                from_email = settings.EMAIL_HOST_USER  # Import this from settings
-                recipient_list = ['mw.devdesign@gmail.com']
-
-                send_mail(subject, message, from_email, recipient_list)
+                self.send_custom_email(subject, message, from_email, to_email)
 
             except Exception as e:
                 context = self.get_context_data(**kwargs)
