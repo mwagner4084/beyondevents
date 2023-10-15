@@ -26,30 +26,30 @@
                 <img src="{% static 'img/logo.png' %}" alt="Beyond Events Logo">
             </a>
         </div> {% endcomment %}
-        <nav class="align-items-center">
-            <ul>
+        <nav class="justify-content-center">
+            <ul class="list-unstyled d-md-flex">
                 <li>
-                    <a href="{% url 'home' %}" class="nav-link">
+                    <a href="{% url 'home' %}">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'about' %}" class="nav-link">
-                        Meet the Owner
+                    <a href="{% url 'about' %}">
+                        About
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'pricing'%}" class="nav-link">
-                        Price Guide
+                    <a href="{% url 'pricing'%}">
+                        Packages
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'testimonials'%}" class="nav-link">
+                    <a href="{% url 'testimonials'%}">
                         Testimonials
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'contact'%}" class="nav-link">
+                    <a href="{% url 'contact'%}">
                         Contact
                     </a>
                 </li>
@@ -59,7 +59,7 @@
             <span></span>
             <span></span>
             <span></span>
-            <ul class="mobile-menu text-white list-unstyled mt-4">
+            <ul class="mobile-menu text-white list-unstyled mx-4">
                 <li>
                     <a href="{% url 'home' %}">
                         Home
@@ -67,12 +67,12 @@
                 </li>
                 <li>
                     <a href="{% url 'about' %}">
-                        Meet the Owner
+                        About
                     </a>
                 </li>
                 <li>
                     <a href="{% url 'pricing'%}">
-                        Price Guide
+                        Packages
                     </a>
                 </li>
                 <li>
@@ -87,83 +87,6 @@
                 </li>
             </ul>
         </div>
-        {% comment %} <nav class="navbar">
-            <div class="logo">
-                <a href="{% url 'home' %}">
-                    <img src="{% static 'img/logo.png' %}" alt="Beyond Events Logo">
-                </a>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="{% url 'home' %}" class="nav-link">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}" class="nav-link">
-                            Meet the Owner
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'pricing'%}" class="nav-link">
-                            Price Guide
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'testimonials'%}" class="nav-link">
-                            Testimonials
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact'%}" class="nav-link">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="hamburger-menu">
-                <div class="hamburger">
-                </div>
-            </div>
-        </nav> {% endcomment %}
-            {% comment %} <div class="container justify-content-lg-between">
-                    <div class="navbar-nav text-center me-0 me-md-auto">
-                        <button type="button" class="navbar-dark navbar-toggler collapsed hamburger" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon navbar-dark"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="navbarToggler">
-                        <ul class="nav-links navbar-nav">
-                            <li>
-                                <a href="{% url 'home' %}" class="nav-link">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'about' %}" class="nav-link">
-                                    Meet the Owner
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'pricing'%}" class="nav-link">
-                                    Price Guide
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'testimonials'%}" class="nav-link">
-                                    Testimonials
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'contact'%}" class="nav-link">
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav> {% endcomment %}
     </header>
 
         <main class="site-main desktop-img mobile-img" role="main">

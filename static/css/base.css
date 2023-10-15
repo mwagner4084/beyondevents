@@ -65,6 +65,10 @@ header a {
   font-size: calc(0.75rem + 0.25vw);
 }
 
+.mx-4 {
+  margin: 0 1.5rem 0 3.5rem !important;
+}
+
 #brand {
   font-weight: bold;
   font-size: calc(1.25rem + 0.25vw);
@@ -94,7 +98,7 @@ ul a {
 }
 
 ul li a {
-  padding: 14px;
+  padding: 12px;
   color: var(--th-color-white);
 }
 
@@ -121,11 +125,30 @@ ul li:hover {
   transition: 0.4s;
 }
 
+@media only screen and (max-width: 900px) {
+  #nav-icon {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #nav-icon {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+  }
+}
+
 #nav-icon {
   width: 60px;
   height: 45px;
   position: relative;
-  margin: auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -190,22 +213,8 @@ ul li:hover {
 }
 
 #nav-icon.open {
-  height: 150px;
+  height: 60px;
   margin: auto 0;
-}
-
-.open .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-  transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.open .bar2 {
-  opacity: 0;
-}
-
-.open .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px);
-  transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .open .mobile-menu {
@@ -232,8 +241,9 @@ ul li:hover {
     display: none;
   }
 
-  #hamburger-icon {
-    display: block;
+  .mobile-menu {
+    justify-content: center;
+    width: 100%;
   }
 }
 
