@@ -21,8 +21,113 @@
 </head>
 <body class="font-family-base">
     <header class="site-header" role="banner">
-        <nav class="navbar navbar-expand-lg justify-content-lg-between">
-            <div class="container justify-content-lg-between">
+        {% comment %} <div id="brand">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Beyond Events Logo">
+            </a>
+        </div> {% endcomment %}
+        <nav class="align-items-center">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}" class="nav-link">
+                        Meet the Owner
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'pricing'%}" class="nav-link">
+                        Price Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'testimonials'%}" class="nav-link">
+                        Testimonials
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'contact'%}" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="nav-icon" class="py-2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="mobile-menu text-white list-unstyled mt-4">
+                <li>
+                    <a href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">
+                        Meet the Owner
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'pricing'%}">
+                        Price Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'testimonials'%}">
+                        Testimonials
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'contact'%}">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {% comment %} <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="Beyond Events Logo">
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}" class="nav-link">
+                            Meet the Owner
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'pricing'%}" class="nav-link">
+                            Price Guide
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'testimonials'%}" class="nav-link">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact'%}" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger">
+                </div>
+            </div>
+        </nav> {% endcomment %}
+            {% comment %} <div class="container justify-content-lg-between">
                     <div class="navbar-nav text-center me-0 me-md-auto">
                         <button type="button" class="navbar-dark navbar-toggler collapsed hamburger" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon navbar-dark"></span>
@@ -58,7 +163,7 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> {% endcomment %}
     </header>
 
         <main class="site-main desktop-img mobile-img" role="main">
