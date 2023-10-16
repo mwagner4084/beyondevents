@@ -12,6 +12,13 @@
 }
 
 @font-face {
+  font-family: 'Fjalla One';
+  font-style: Regular;
+  font-weight: 400;
+  src: local('F'), url('../fonts/FjallaOne-Regular.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'Alegreya SC BoldItalic';
   font-style: BoldItalic;
   font-weight: 700;
@@ -32,7 +39,7 @@
   --heading-font-weight: 900;
   --navbar-font-family: "Alegreya SC", sans-serif;
 
-  --bs-body-font-family: "Alegreya SC", sans-serif;
+  --bs-body-font-family: "Fjalla One", sans-serif;
   --bs-body-font-weight: 400;
 
   --bs-card-border-width: 3px;
@@ -48,11 +55,11 @@ h6 {
   font-family: var(--heading-font-family);
   text-align: center;
   align-items: center;
+  font-weight: 800;
 }
 
 header {
   font-family: var(--heading-font-family);
-  padding: 0 10px 0 10px;
   display: block;
   justify-content: space-between;
   align-items: center;
@@ -63,23 +70,6 @@ header a {
   text-decoration: none;
   color: var(--th-color-white);
   font-size: calc(0.75rem + 0.25vw);
-}
-
-.mx-4 {
-  margin: 0 1.5rem 0 3.5rem !important;
-}
-
-#brand {
-  font-weight: bold;
-  font-size: calc(1.25rem + 0.25vw);
-  display: flex;
-  align-items: center;
-}
-
-#brand a {
-  text-decoration: none;
-  color: var(--th-color-white);
-  font-size: calc(1.25rem + 0.25vw);
 }
 
 ul {
@@ -98,31 +88,13 @@ ul a {
 }
 
 ul li a {
-  padding: 12px;
+  padding: 10px;
   color: var(--th-color-white);
 }
 
 ul li:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
-}
-
-.mt-4 {
-  margin-top: 5rem !important;
-}
-
-#hamburger-icon {
-  margin: auto 0;
-  display: none;
-  cursor: pointer;
-}
-
-#hamburger-icon div {
-  width: 35px;
-  height: 3px;
-  padding: 2px;
-  background-color: white;
-  transition: 0.4s;
 }
 
 @media only screen and (max-width: 900px) {
@@ -132,6 +104,17 @@ ul li:hover {
 
   header nav {
     display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -163,12 +146,12 @@ ul li:hover {
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 9px;
-  width: 100%;
+  height: 5px;
+  width: 75%;
   background: var(--th-color-white);
   border-radius: 9px;
   opacity: 1;
-  left: 0;
+  right: 150px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -192,6 +175,7 @@ ul li:hover {
 }
 
 #nav-icon.open span:nth-child(1) {
+  /* display: none; */
   top: 25px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -205,6 +189,7 @@ ul li:hover {
 }
 
 #nav-icon.open span:nth-child(3) {
+  /* display: none; */
   top: 25px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
@@ -213,14 +198,14 @@ ul li:hover {
 }
 
 #nav-icon.open {
-  height: 60px;
+  height: 250px;
   margin: auto 0;
 }
 
 .open .mobile-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .mobile-menu {
@@ -236,15 +221,17 @@ ul li:hover {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 900px) {
-  header nav {
-    display: none;
-  }
-
-  .mobile-menu {
-    justify-content: center;
-    width: 100%;
-  }
+.mobile-menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 
@@ -362,12 +349,28 @@ footer {
   --_x: calc(-1*var(--g))
 }
 
+ul, il {
+  font-size: calc(0.8rem + 0.25vw);
+}
+
 p {
-  font-size: calc(1rem + 0.25vw);
+  font-size: calc(0.8rem + 0.5vw);
 }
   
 .site-main {
   min-height: 90vh;
+}
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header nav {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
 }
 
 .a-link {
@@ -377,7 +380,7 @@ p {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--th-color-blue-gray);
   font-weight: 700;
 }
