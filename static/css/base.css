@@ -171,11 +171,11 @@ ul li:hover {
 }
 
 #logo {
-  width: 30px;
+  width: 40px;
   height: auto;
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 10px;
 }
 
 /* #nav-icon {
