@@ -27,65 +27,71 @@
                 <img src="{% static 'img/logo.png' %}" alt="Beyond Events Logo">
             </a>
         </div> {% endcomment %}
-        <nav class="justify-content-center">
-            <ul class="list-unstyled d-md-flex">
-                <li>
-                    <a href="{% url 'home' %}">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'about' %}">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'pricing'%}">
-                        Packages
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'testimonials'%}">
-                        Testimonials
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'contact'%}">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div id="menu-icon" class=" mx-2">
-            <img src="{% static 'img/heart-knot.png' %}" id="logo" class="d-md-flex" alt="Menu Icon">
+        <div class="container">
+            <nav class="justify-content-center">
+                <div class="pullUp">
+                    <ul class="list-unstyled d-md-flex">
+                        <li>
+                            <a href="{% url 'home' %}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pricing'%}">
+                                Packages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'testimonials'%}">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact'%}">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="menu-icon" class=" mx-2">
+                <img src="{% static 'img/heart-knot.png' %}" id="logo" class="d-md-flex pullUp" alt="Menu Icon">
+            </div>
+            <div class="pullUp">
+                <ul class="mobile-menu text-white list-unstyled mx-auto">
+                    <li>
+                        <a href="{% url 'home' %}">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'pricing'%}">
+                            Packages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'testimonials'%}">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact'%}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="mobile-menu text-white list-unstyled mx-auto">
-            <li>
-                <a href="{% url 'home' %}">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'about' %}">
-                    About
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'pricing'%}">
-                    Packages
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'testimonials'%}">
-                    Testimonials
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'contact'%}">
-                    Contact
-                </a>
-            </li>
-        </ul>
     </header>
 
         <main class="site-main desktop-img mobile-img" role="main">
