@@ -30,6 +30,10 @@ class TestimonialsPageView(TemplateView):
     template_name = "testimonials.html"
 
 
+class GalleryPageView(TemplateView):
+    template_name = "gallery.html"
+
+
 class ContactPageView(TemplateView):
     handle = 'contact'
     template_name = "contact.html"
