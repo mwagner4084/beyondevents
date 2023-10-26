@@ -8,18 +8,6 @@ from .models import Contact
 
 class ContactForm(forms.Form):
     """ Form for the contact page. """
-    # class Meta:
-    #     model = Contact
-    #     fields = (
-    #         'fname',
-    #         'lname',
-    #         'email',
-    #         'phone',
-    #         'location',
-    #         # 'wedding_date',
-    #         'comments',
-    #         'referred_by',
-    #     )
 
     fname = forms.CharField(
         help_text='',
