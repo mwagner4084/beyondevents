@@ -229,7 +229,7 @@ blockquote {
 }
 
 blockquote:before {
-  font-family: var(--quote-font-family);
+  font-family: "Georgia", sans-serif;
   position: absolute;
   color: var(--th-color-gray);
   font-size: 10em;
@@ -239,7 +239,7 @@ blockquote:before {
   content: open-quote;
 }
 blockquote:after {
-  font-family: var(--quote-font-family);
+  font-family: "Georgia", sans-serif;
   position: absolute;
   float:right;
   font-size:10em;
@@ -375,7 +375,7 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('../img/babys-breath-vert.jpg');
+  background-image: url('../img/babys-breath-vert.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -623,15 +623,15 @@ a:hover {
 }
 
 @media screen and (max-width: 900px){
-  /* .mobile-img {
-    background-image: url('../img/tableset.jpg');
-    background-color: --th-color-white;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    loading: lazy;
-  }   */
+  blockquote {
+    font-family: var(--quote-font-family);
+    position: relative;
+    margin: 0;
+    padding: 65px 20px 65px 20px;
+    line-height: 1.4;
+    font-size: 1em;
+    color: var(--th-color-black);
+  }
 
   .row {
     flex-direction: column;
