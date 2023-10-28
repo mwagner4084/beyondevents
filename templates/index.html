@@ -9,8 +9,8 @@
     <div class="container pb-3">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-8 mb-4 mb-md-0 text-center">
-                <div class="card my-3 border-dark slide-in-left">
-                    <img src="{% static 'img/beyond_logo.png' %}" class="card-img-top mb-md-0" alt="logo" loading="lazy">
+                <div class="card my-3 border-dark slide-in-left card-black">
+                    <img src="{% static 'img/beyond_logo.png' %}" class="card-img-top" alt="logo" loading="lazy">
                 </div>
                 <div class="card border-dark pt-3 slide-in-right">
                     <div class="card-body text-center">
@@ -30,10 +30,10 @@
                 </div>
                 <div class="card border-dark mt-3 slide-in-right">
                     <div class="card-body text-center">
-                        <h2>
+                        {% comment %} <h2>
                             Ready to bring your vision to life?
                         </h2>
-                        <hr>
+                        <hr> {% endcomment %}
                         {% comment %} <a href="{% url 'contact' %}" class="btn btn-primary w-80" role="button">Book Your Free Consultation Now!</a> {% endcomment %}
                         {% comment %} <p>
                             Complete the form on our <a href="{% url 'contact' %}" class="a-link">contact</a> page to schedule your consultation.
@@ -46,7 +46,7 @@
                             Proudly serving Michigan and Indiana.
                         </p> {% endcomment %}
                         <a href="{% url 'contact' %}" role="button">
-                            <img src="{% static 'img/rings.png' %}" class="img-fluid" alt="book" loading="lazy">
+                            <img src="{% static 'img/book-wood.png' %}" class="img-fluid" alt="book" loading="lazy">
                         </a>
                     </div>
                 </div>

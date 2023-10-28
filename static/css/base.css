@@ -365,6 +365,10 @@ footer {
   height: auto;
 }
 
+.card-black {
+  background-color: var(--th-color-black);
+}
+
 .template-gallery {
   font-family: var(--bs-body-font-family);
   background-color: var(--th-color-white);
