@@ -5,6 +5,13 @@
 }
 
 @font-face {
+  font-family: 'Playfair Display';
+  font-style: Regular;
+  font-weight: 400;
+  src: local('P'), url('../fonts/PlayfairDisplay.ttf') format('ttf');
+}
+
+@font-face {
   font-family: 'Round Style Basic';
   font-style: Medium;
   font-weight: 400;
@@ -45,7 +52,7 @@
   --heading-font-family: "Alegreya SC", sans-serif;
   --heading-font-weight: 900;
   --navbar-font-family: "Alegreya SC", sans-serif;
-  --quote-font-family: "Round Style Basic", sans-serif;
+  --quote-font-family: "Playfair Display", sans-serif;
   --bs-body-font-family: "Fjalla One", sans-serif;
   --bs-body-font-weight: 400;
 
@@ -115,6 +122,10 @@ header ul li:hover {
   font-family: var(--quote-font-family);
   font-weight: 400;
   font-size: calc(0.75rem + 0.5vw);
+}
+
+figcaption {
+  text-transform: uppercase;
 }
 
 em {
@@ -206,18 +217,36 @@ em {
   padding-bottom: 1rem;
 }
 
-.left-quote-img {
-  width: 100px;
-  height: auto;
-  opacity: 0.5;
-  right: 200px;
+
+blockquote {
+  font-family: var(--quote-font-family);
+  position: relative;
+  margin: 0;
+  padding: 40px 75px 40px 75px;
+  line-height: 1.4;
+  font-size: 1em;
+  color: var(--th-color-black);
 }
 
-.right-quote-img {
-  width: 100px;
-  height: auto;
-  opacity: 0.5;
-  left: 200px;
+blockquote:before {
+  font-family: var(--quote-font-family);
+  position: absolute;
+  color: var(--th-color-gray);
+  font-size: 10em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: open-quote;
+}
+blockquote:after {
+  font-family: var(--quote-font-family);
+  position: absolute;
+  float:right;
+  font-size:10em;
+  line-height: 1;
+  right:0;
+  bottom:-0.5em;
+  content: close-quote;
 }
 
 .mobile-menu {
@@ -280,6 +309,13 @@ em {
   --bs-btn-disabled-border-color: var(--th-color-black);
 }
 
+btn {
+  font-family: var(--heading-font-family);
+  font-size: calc(0.75rem + 0.25vw);
+  width: 80%;
+  
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -335,6 +371,63 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('../img/babys-breath-vert.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  max-width: 100%;
+}
+
+.template-home {
+  background-image: url('../img/greenery_bg.jpg');
+  background-color: --th-color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.template-pricing {
+  background-image: url('../img/bouquet_bg2.png');
+  background-color: --th-color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  max-width: 100%;
+}
+
+.template-about {
+  background-image: url('../img/peals.jpg');
+  background-color: --th-color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  max-width: 100%;
+}
+
+.template-testimonials {
+  background-image: url('../img/babys-breath.jpg');
+  background-color: --th-color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  max-width: 100%;
+}
+
+.template-contact {
+  background-image: url('../img/fresh-flwr.jpg');
+  background-color: --th-color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  loading: lazy;
+  max-width: 100%;
 }
 
 .scroll-gallery {
@@ -462,6 +555,10 @@ p {
   .col-md-6 {
     width: 100%;
   }
+
+  .col-md-4 {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -497,38 +594,40 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-@media screen and (min-width: 995px){
-
-  .desktop-img {
-    background-image: url('../img/flwr.png');
-    background-color: --th-color-white;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    loading: lazy;
-  }  
+@media screen and (min-width: 900px){
   
   .row {
     flex-direction: row;
+    padding-bottom: 1rem;
   }
 
   .col-12 {
-    /* width: 50%; */
     margin: 0.25rem 0 0.25rem 0;
+  }
+
+  .card {
+    padding-bottom: 0.25rem;
+  }
+
+  .col-md-4 {
+    width: 33%;
+  }
+
+  .col-md-6 {
+    width: 50%;
   }
 }
 
-@media screen and (max-width: 995px){
-  .mobile-img {
-    background-image: url('../img/flwr.png');
+@media screen and (max-width: 900px){
+  /* .mobile-img {
+    background-image: url('../img/tableset.jpg');
     background-color: --th-color-white;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     loading: lazy;
-  }  
+  }   */
 
   .row {
     flex-direction: column;
@@ -538,6 +637,10 @@ a:hover {
   .col-12 {
     width: 80%;
     padding: 0.25rem;
+  }
+
+  .col-md-4 {
+    width: 100%;
   }
 
   .scroll-li {
