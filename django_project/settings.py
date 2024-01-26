@@ -134,6 +134,14 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
+STRIPE_LIVE_SECRET_KEY = os.getenv('STRIPE_LIVE_SECRET_KEY', '')
+STRIPE_TEST_SECRET_KEY = os.getenv('STRIPE_TEST_SECRET_KEY', '')
+STRIPE_LIVE_MODE = True  # Change to True in production
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '') if not STRIPE_LIVE_MODE else os.getenv('STRIPE_LIVE_PUBLIC_KEY', '')
+DJSTRIPE_WEBHOOK_SECRET = os.getenv('DJSTRIPE_WEBHOOK_SECRET', '')
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
