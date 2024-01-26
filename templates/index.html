@@ -22,28 +22,24 @@
                             We offer a variety of packages to suit your needs, from full-service planning to day-of coordination. 
                             We believe that every couple deserves a wedding that reflects their unique love story. We will work with you to create a personalized experience that you and your guests will remember for years to come.
                         </p>
+                        <hr>
+                        <a href="{% url 'about' %}" class="link">Our Story</a>
+                        |
+                        <a href="{% url 'pricing' %}" class="link">Explore Our Packages</a>
+                        |
+                        <a href="{% url 'gallery' %}" class="link">View Our Portfolio</a> 
+                        <a class="codepen-button" href="{% url 'contact'%}">
+                            <span>
+                                Schedule your free consultation
+                            </span>
+                        </a>
                     </div>
-                    <img src="{% static 'img/bw-wedding.png' %}" class="card-img-bottom home-img" alt="flowers" loading="lazy">
                 </div>
-                {% comment %} <div class="card border-dark mt-3 mb-3 slide-in-left">
-                    <div class="card-body text-center">
-                    </div>
-                </div> {% endcomment %}
             </div>
         </div>
     </div>
 </div>
-<section class="align-items-center bg-black text-white">
-    <h2 class="text-center display-5 pt-2">
-        Ready to bring your vision to life?
-    </h2>
-    <a class="codepen-button" href="{% url 'contact'%}">
-        <span>
-            Click here to schedule your - free - consultation
-        </span>
-    </a>
-    {% comment %} <img src="{% static 'img/page-break.png' %}" class="img-fluid pb-img" alt="page break" loading="lazy"> {% endcomment %}
-</section>
+
 
 
 

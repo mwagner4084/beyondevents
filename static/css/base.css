@@ -48,6 +48,7 @@
   --th-color-light-gray: #D9D9D9;
   --th-color-blue-gray: #abbdc9;
   --th-color-lavender: #63477a;
+  --bs-link-color: #2aa3b1;
 
   --heading-font-family: "Alegreya SC", sans-serif;
   --heading-font-weight: 900;
@@ -131,7 +132,13 @@ figcaption {
 }
 
 em {
-  text-align: justify;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--bs-link-color);
+  font-size: calc(1rem + 0.25vw);
 }
 
 #menu-icon:hover {
@@ -223,8 +230,8 @@ em {
 blockquote {
   font-family: var(--quote-font-family);
   position: relative;
-  margin: 0;
-  padding: 40px 75px 40px 75px;
+  margin: -30;
+  padding: 55px 75px 60px 75px;
   line-height: 1.4;
   font-size: 1em;
   color: var(--th-color-black);
@@ -238,6 +245,7 @@ blockquote:before {
   line-height: 1;
   top: 0;
   left: 0;
+  margin-bottom: 1rem;
   content: open-quote;
 }
 blockquote:after {
@@ -650,7 +658,7 @@ section {
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1200px){
+@media screen and (min-width: 300px) and (max-width: 1200px){
   blockquote {
     font-family: var(--quote-font-family);
     position: relative;
@@ -977,7 +985,8 @@ section {
   text-align: center;
   font-family: var(--heading-font-family);
   width: 80%;
-  top: 30px;
+  top: 10px;
+  bottom: 10px;
   left: 0;
 }
 
