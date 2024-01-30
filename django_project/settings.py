@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     # Local
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -138,8 +139,9 @@ STRIPE_LIVE_SECRET_KEY = os.getenv('STRIPE_LIVE_SECRET_KEY', '')
 STRIPE_TEST_SECRET_KEY = os.getenv('STRIPE_TEST_SECRET_KEY', '')
 STRIPE_LIVE_MODE = True  # Change to True in production
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '') if not STRIPE_LIVE_MODE else os.getenv('STRIPE_LIVE_PUBLIC_KEY', '')
-DJSTRIPE_WEBHOOK_SECRET = os.getenv('DJSTRIPE_WEBHOOK_SECRET', '')
+# DJSTRIPE_WEBHOOK_SECRET = os.getenv('DJSTRIPE_WEBHOOK_SECRET', '')
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 # Static files (CSS, JavaScript, Images)
