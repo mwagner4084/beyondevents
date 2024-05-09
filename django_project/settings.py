@@ -142,6 +142,9 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '') if not STRIPE_LIVE_M
 # DJSTRIPE_WEBHOOK_SECRET = os.getenv('DJSTRIPE_WEBHOOK_SECRET', '')
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
 
 
 # Static files (CSS, JavaScript, Images)

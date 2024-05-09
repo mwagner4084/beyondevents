@@ -27,8 +27,11 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     """ User Model """
-    username = models.CharField(max_length=254, unique=True)
+    username = models.CharField(max_length=254, null=True, blank=True)
+    first_name = models.CharField(max_length=254, null=True, blank=True)
+    last_name = models.CharField(max_length=254, null=True, blank=True)
     email = models.EmailField(max_length=254, unique=True)
+    phone = models.CharField(max_length=254, null=True, blank=True)
     password = models.CharField(max_length=254)
     date_joined = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now_add=True)
@@ -40,21 +43,27 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'phone']
 
     def __str__(self):
-        return self.username
+        return self.last_name + ", " + self.first_name
     
     def get_absolute_url(self):
-        return reverse("user", args=(self.pk))
+        return reverse("profile", args=(self.pk))
 
 class UserProfile(models.Model):
     """ User Profile Model """
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    profile_pic = models.ImageField(upload_to="profile_pics", null=True, blank=True)
+    profile_pic = models.ImageField(upload_to="user_photos", null=True, blank=True)
     bio = models.CharField(max_length=500, null=True, blank=True)
+    photos = models.ImageField(upload_to="user_photos", null=True, blank=True)
     mood_board = models.URLField(max_length=200, null=True, blank=True)
-    wedding_date = models.DateField(auto_now_add=True)
+    wedding_date = models.DateField(null=True, blank=True)
+    location = models.CharField(max_length=254, null=True, blank=True)
+    guests = models.IntegerField(null=True, blank=True)
+    bridesmaids = models.IntegerField(null=True, blank=True)
+    groomsmen = models.IntegerField(null=True, blank=True)
+
     date_added = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
