@@ -39,6 +39,55 @@
   src: local('A'), url('../fonts/AlegreyaSC-BoldItalic.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'Lustria';
+  font-style: Regular;
+  font-weight: 400;
+  src: local('A'), url('../fonts/Lustria-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: Bold;
+  font-weight: 700;
+  src: local('A'), url('../fonts/CormorantGaramond-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  src: local('A'), url('../fonts/CormorantGaramond-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant SC';
+  font-style: Normal;
+  font-weight: 500;
+  src: local('A'), url('../fonts/CormorantSC-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant SC';
+  font-style: Bold;
+  font-weight: 700;
+  src: local('A'), url('../fonts/CormorantSC-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Eyesome Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('A'), url('../fonts/Eyesome-Script.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'WindSong';
+  font-style: normal;
+  font-weight: 500;
+  src: local('A'), url('../fonts/WindSong-Medium.ttf') format('ttf');
+}
+
 :root {
   --th-color-brown: #916953;
   --th-color-white: #FFFFFF;
@@ -48,52 +97,82 @@
   --th-color-light-gray: #D9D9D9;
   --th-color-blue-gray: #abbdc9;
   --th-color-lavender: #63477a;
+  --th-color-beige: #CBB2A3;
+  --th-color-cream: #FAF6F5;
   --bs-link-color: #2aa3b1;
 
-  --heading-font-family: "Alegreya SC", sans-serif;
-  --heading-font-weight: 900;
-  --navbar-font-family: "Alegreya SC", sans-serif;
+  --heading-font-family: "Cormorant SC", sans-serif;
+  --heading-font-weight: 600;
+  --subheading-font-family: "Cormorant SC", sans-serif;
+  --subheading-font-weight: 400;
+  --navbar-font-family: "Lustria", sans-serif;
   --quote-font-family: "Playfair Display", sans-serif;
-  --bs-body-font-family: "Fjalla One", sans-serif;
+  --bs-body-font-family: "Lustria", sans-serif;
   --bs-body-font-weight: 400;
+  --title-font-family: "WindSong", serif;
+  --title-font-weight: 500;
 
   --bs-card-border-width: 3px;
 
 }
 
-.background-img {
-  background-image: url('../img/fresh-flwr.jpg');
-  background-color: --th-color-white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 100%;
+.background {
+  background-color: var(--th-color-cream);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
   text-align: center;
   align-items: center;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+.h1-logo {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 45px;
+}
+
+.h3-logo {
+  font-family: var(--subheading-font-family);
+  font-weight: var(--subheading-font-weight);
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 27.5px;
+}
+
+.h2 {
+  font-family: var(--title-font-family);
+}
+
+p {
+  font-family: var(--bs-body-font-family);
+  font-weight: var(--bs-body-font-weight);
+  text-align: center;
 }
 
 header {
-  font-family: var(--heading-font-family);
+  font-family: var(--navbar-font-family);
   display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--th-color-black);
+  background-color: var(--th-color-beige);
 }
 
 header a {
   text-decoration: none;
-  color: var(--th-color-white);
+  color: var(--th-color-black);
   font-size: calc(0.75rem + 0.25vw);
   justify-content: center;
 }
@@ -109,14 +188,14 @@ header ul a {
   height: 100%;
   display: flex;
   text-decoration: none;
-  color: var(--th-color-white);
+  color: var(--th-color-black);
   font-size: calc(0.75rem + 0.25vw);
   text-align: center;
 }
 
 header ul li a {
   padding: 10px;
-  color: var(--th-color-white);
+  color: var(--th-color-black);
 }
 
 header ul li:hover {
@@ -190,6 +269,73 @@ em {
     justify-content: center;
     text-align: center;
   }
+
+  .h1-logo {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    text-align: center;
+    align-items: center;
+    color: #FFF;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 26px;
+  }
+  
+  .h3-logo {
+    font-family: var(--subheading-font-family);
+    font-weight: var(--subheading-font-weight);
+    text-align: center;
+    align-items: center;
+    color: #FFF;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+  }
+
+  .codepen-button {
+    display: block;
+    cursor: pointer;
+    color: var(--th-color-white);
+    background-color: var(--th-color-black);
+    margin: auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+    text-align: center;
+    font-family: var(--heading-font-family);
+    width: 100%;
+    top: 10px;
+    bottom: 20px;
+    left: 0;
+  }
+  
+  .codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg,#6096ba,#9f86c0,#87c38f,#bbd0ff,#ea9ab2);
+    background-size: 25% 100%;
+    /* animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out; */
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -224,7 +370,6 @@ em {
   position: absolute;
   left: 0;
   top: 5px;
-  filter: invert(50%);
 }
 
 .rounded-circle {
@@ -328,7 +473,7 @@ blockquote:after {
   --bs-btn-disabled-border-color: var(--th-color-black);
 }
 
-btn {
+.btn {
   font-family: var(--heading-font-family);
   font-size: calc(0.75rem + 0.25vw);
   width: 80%;
@@ -360,8 +505,13 @@ h1.heading {
 
 .home-img {
   width: 100%;
-  max-height: 500px;
   height: auto;
+}
+
+.divider {
+  width: 50%;
+  height: auto;
+  display: inline-block;
 }
 
 .border-dark {
@@ -370,13 +520,15 @@ h1.heading {
 
 footer {
   display: in-line;
-  background-color: var(--th-color-black);
-  color: var(--th-color-white);
+  background-color: var(--th-color-beige);
+  color: var(--th-color-black);
   text-transform: uppercase;
   text-align: center;
   font-size: calc(0.75rem + 0.25vw);
   justify-content: center;
   padding-top: 1rem;
+  font-family: var(--navbar-font-family);
+  font-weight: var(--heading-font-weight);
 }
 
 .img {
@@ -403,16 +555,6 @@ footer {
   max-width: 100%;
 }
 
-.home-bg {
-  background-color: --th-color-white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  loading: lazy;
-  min-height: 100vh;
-  max-width: 100%;
-}
-
 img {
   display: block;
   width: 100%;
@@ -426,17 +568,6 @@ img {
   top: 0;
   left: 0;
   filter: invert(100%);
-}
-
-.template-home {
-  background-image: url('../img/greenery_bg.jpg');
-  background-color: --th-color-white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  loading: lazy;
-  min-height: 100vh;
-  max-width: 100%;
 }
 
 .template-pricing {
@@ -597,26 +728,7 @@ p {
 }
 
 .site-header {
-  background: var(--th-color-black);
-}
-
-@media screen and (min-width: 768px){
-  .col-md-6 {
-    width: 100%;
-  }
-
-  .col-md-4 {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 768px){
-
-  .site-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background: var(--th-color-beige);
 }
 
 .site-header nav {
@@ -624,6 +736,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: var(--th-color-black)
 }
 
 .a-link {
@@ -634,7 +747,7 @@ p {
 
 a:hover {
   text-decoration: underline;
-  color: var(--th-color-blue-gray);
+  color: var(--th-color-lavender);
   font-weight: 700;
 }
 
@@ -646,6 +759,22 @@ section {
 
 .card-body {
   margin: 0 1px 0 1px;
+}
+
+@media screen and (min-width: 768px){
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .col-md-4 {
+    width: 50%;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -700,6 +829,7 @@ section {
     font-family: var(--heading-font-family);
   }
 }
+
 
 .bride-img {
   width: 300px;
@@ -993,9 +1123,9 @@ section {
   isolation: isolate;
   text-align: center;
   font-family: var(--heading-font-family);
-  width: 80%;
+  width: 90%;
   top: 10px;
-  bottom: 10px;
+  bottom: 20px;
   left: 0;
 }
 
