@@ -7,40 +7,41 @@
 
 <div>
     <div class="container">
-        <div class="row justify-content-md-center align-items-center">
-            <div class="col-12 col-md-10 mb-md-0 text-center">
-                <div class="card my-3 border-dark slide-in-left card-black">
-                    <h1 class="h1-logo">
+        <div class="row row-cols-1 g-3 mx-auto my-auto">
+            <div class="col text-center">
+                <div class="card card-dark my-3 border-dark text-dark">
+                    <h1 class="h1-logo text-white">
                         BEYOND EVENTS
                     </h1>
-                    <h3 class="h3-logo">
+                    <h3 class="h3-logo text-white">
                         WEDDING PLANNING &amp; RENTALS
                     </h3>
                 </div>
                 <div class="card border-dark my-3 slide-in-right">
                     <div class="card-body text-center">
-                        <h2 class="h2-title">
+                        <div class="script">
                             Under Construction
-                        </h2>
+                        </div>
                         <h5>
-                            <strong><i>2025 UPDATES COMING SOON</i></strong>
+                            <strong><i>2025/2026 UPDATES COMING SOON</i></strong>
                         </h5>
                         <br>
-                        <p>
+                        <div class="card-text">
                             Your wedding is a once-in-a-lifetime event, and we are here to ensure it's as magical as you've always dreamed. With over 250 events planned worldwide, including over 100 weddings since 2022, our owner and head coordinator brings a wealth of experience and a keen eye for detail to your special day.
-                        </p>
-                        <p>
+                            <br>
+                            <br>
                             We offer a variety of packages to suit your needs, from full-service planning to day-of coordination. 
                             We believe that every couple deserves a wedding that reflects their unique love story. We will work with you to create a personalized experience that you and your guests will remember for years to come.
-                        </p>
-                        <br>
-                        <p>
+                            <br>
+                            <br>
                             Proudly serving the greater Midwest region. International planning and coordination available.
-                        </p>
+                        </div>
                         <hr>
                         <a href="{% url 'about' %}" class="link">Our Story</a>
                         |
                         <a href="{% url 'pricing' %}" class="link">Packages</a>
+                        |
+                        <a href="{% url 'rentals' %}" class="link">Rentals</a>
                         |
                         <a href="{% url 'gallery' %}" class="link">Portfolio</a> 
                         <a class="codepen-button my-3" href="{% url 'contact'%}">

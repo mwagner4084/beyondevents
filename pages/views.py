@@ -25,6 +25,8 @@ class AboutPageView(TemplateView):
 class PricingPageView(TemplateView):
     template_name = "pricing.html"
 
+class RentalsPageView(TemplateView):
+    template_name = "rentals.html"
 
 class TestimonialsPageView(TemplateView):
     template_name = "testimonials.html"

@@ -17,18 +17,24 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="favicon" sizes="57x57" href="{% static 'icons/favicon.png' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Basic favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <!-- For modern browsers, include multiple sizes -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'favicon-192x192.png' %}">
+    <!-- For Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <!-- Web App Manifest for PWA support -->
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Lustria&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 </head>
-</head>
+
 <body class="font-family-base background lazyload">
     <header class="site-header" role="banner">
         <div class="container">
             <nav class="justify-content-center text-dark">
-                <div class="pullUp">
+               
                     <ul class="list-unstyled d-md-flex">
                         <li>
                             <a href="{% url 'home' %}">
@@ -37,7 +43,7 @@
                         </li>
                         <li>
                             <a href="{% url 'about' %}">
-                                About
+                                Our Story
                             </a>
                         </li>
                         <li>
@@ -46,8 +52,13 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{% url 'rentals'%}">
+                                Rentals
+                            </a>
+                        </li>
+                        <li>
                             <a href="{% url 'testimonials'%}">
-                                Testimonials
+                                Reviews
                             </a>
                         </li>
                         <li>
@@ -57,10 +68,10 @@
                         </li>
                         <li>
                             <a href="{% url 'contact'%}">
-                                Contact
+                                Inquire
                             </a>
                         </li>
-                        {% if user.is_authenticated and user.userprofile %}
+                        {% comment %} {% if user.is_authenticated and user.userprofile %}
                         <li>
                             <a href="{% url 'accounts:profile' pk=user.userprofile.pk %}">
                                 Client Portal
@@ -72,80 +83,84 @@
                                 Client Portal
                             </a>
                         </li>
-                        {% endif %}
+                        {% endif %} {% endcomment %}
                     </ul>
-                </div>
             </nav>
             <div id="menu-icon" class=" mx-2">
-                <img src="{% static 'img/hamburger-menu.png' %}" id="logo" class="d-md-flex pullUp mx-1" alt="Menu Icon" loading="lazy">
+                <img src="{% static 'img/hamburger-menu.png' %}" id="logo" class="d-md-flex mx-1" alt="Menu Icon" loading="lazy">
+                <ul class="mobile-menu text-white list-unstyled mx-auto">
+                    
+                        <li>
+                            <a href="{% url 'home' %}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}">
+                                Our Story
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pricing'%}">
+                                Packages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'rentals'%}">
+                                Rentals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'testimonials'%}">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact'%}">
+                                Inquire
+                            </a>
+                        </li>
+                   
+                </ul>
             </div>
-            <ul class="mobile-menu text-white list-unstyled mx-auto">
-                <div class="pullUp">
-                    <li>
-                        <a href="{% url 'home' %}">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'pricing'%}">
-                            Packages
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'testimonials'%}">
-                            Testimonials
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'gallery' %}">
-                            Gallery
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact'%}">
-                            Contact
-                        </a>
-                    </li>
-                </div>
-            </ul>
         </div>
     </header>
 
-        <main class="site-main" role="main">
+    <main class="site-main" role="main">
 
-            {% block content %}
-            {% endblock content %}
+        {% block content %}
+        {% endblock content %}
 
 
-        </main>
-        <footer class="py-3 px-3">
-            <div class="d-lg-flex text-dark justify-content-between">
-                <div>
-                    <small>Proudly Serving the Greater Midwest &amp; Beyond</small>
-                </div>
-                <div>
-                    <small>(269)348-3690</small>
-                </div>
-                <div>
-                    <small>&copy; Beyond Events, {% now "Y" %}. All rights reserved.</small>
-                </div>
+    </main>
+    <footer class="py-3 px-3">
+        <div class="d-lg-flex text-dark justify-content-between">
+            <div>
+                <small>Proudly Serving the Greater Midwest &amp; Beyond</small>
             </div>
-        </footer>
+            <div>
+                <small>(269)348-3690</small>
+            </div>
+            <div>
+                <small>&copy; Beyond Events, {% now "Y" %}. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
 
-        <!-- JQuery JS Bundle -->
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
-        </script>
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-        </script>
-        <!-- Custom JS -->
-        <script src="{% static 'js/base.js'%}">
-        </script>
+    <!-- JQuery JS Bundle -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <!-- Custom JS -->
+    <script src="{% static 'js/base.js'%}">
+    </script>
 
     </body>
 </html>

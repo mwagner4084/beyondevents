@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load my_templatetags %}
+
+{% block content %}
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-lg-12 align-self-center">
+            <div class="card card-dark border-dark my-3">
+                <div class="card-body text-center">
+                    <h1 class="h1-logo text-white">
+                        BEYOND RENTALS
+                    </h1>
+                    <h3 class="card-subtitle text-white">
+                        - 2025 Price Guide -
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Candles
+                    </h2>
+                    <div class="card-text rental-card">
+                        All candles holders come with complimentary LED candles. Real candles available upon request (cost based on style). Please keep in mind many venues have candle restrictions.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/candles.png' %}" alt="Candle Wedding Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $3 to $30 per set.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Chargers
+                    </h2>
+                    <div class="card-text">
+                        Chargers add an extra touch of sophistication and a polished look to your guest's dining experiences. Choose from a variety of styles, materials, and finishes to elevate your table decor.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/chargers.png' %}" alt="Charger Wedding Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $2 to $15 per piece.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Fabrics &amp; Linens
+                    </h2>
+                    <div class="card-text">
+                        Linens and fabrics, such as tablecloths and draping, can add a touch of elegance to your wedding by bringing color, texture, and personalization to the décor.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/fabrics.png' %}" alt="Fabric and Linen Wedding Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $4 to $150 per piece.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Mirrors
+                    </h2>
+                    <div class="card-text rental-card">
+                        Mirrors can be used as wedding signage to add a touch of elegance and charm, reflecting light while creating a stylish and timeless look. White vinyl calligraphy can be added to the mirrors for a personalized and sophisticated touch.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/mirrors.png' %}" alt="Mirror Wedding Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $200 to $1,000 per piece.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Signage
+                    </h2>
+                    <div class="card-text rental-card">
+                        Signage adds both style and functionality to a wedding, guiding guests while enhancing the overall décor. We offer a variety of signage options, including welcome signs, seating charts, and table numbers.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/signs.png' %}" alt="Wedding Signage Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $25 to $50 per piece.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card decor-card border-dark h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">
+                        Florals
+                    </h2>
+                    <div class="card-text rental-card">
+                        Flowers set the mood and bring out the beauty in every detail. We offer light floral installations to complement our rental items, adding an elegant touch to your wedding décor. Pricing is available varies based on your selections.
+                    </div>
+                    <hr>
+                    <img class="card-img-bottom" src="{% static 'img/floral.png' %}" alt="Wedding Floral Rentals" loading="lazy">
+                </div>
+                <div class="card-footer">
+                    <small class="text-black">
+                        Ranging from $4 to $150 per piece.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

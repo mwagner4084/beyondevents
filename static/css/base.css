@@ -5,41 +5,6 @@
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  font-style: Regular;
-  font-weight: 400;
-  src: local('P'), url('../fonts/PlayfairDisplay.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Round Style Basic';
-  font-style: Medium;
-  font-weight: 400;
-  src: local('A'), url('../fonts/RoundStyleBasic.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Alegreya SC';
-  font-style: Medium;
-  font-weight: 400;
-  src: local('A'), url('../fonts/AlegreyaSC-Medium.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Fjalla One';
-  font-style: Regular;
-  font-weight: 400;
-  src: local('F'), url('../fonts/FjallaOne-Regular.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Alegreya SC BoldItalic';
-  font-style: BoldItalic;
-  font-weight: 700;
-  src: local('A'), url('../fonts/AlegreyaSC-BoldItalic.ttf') format('ttf');
-}
-
-@font-face {
   font-family: 'Lustria';
   font-style: Regular;
   font-weight: 400;
@@ -75,13 +40,6 @@
 }
 
 @font-face {
-  font-family: 'Eyesome Script';
-  font-style: normal;
-  font-weight: 400;
-  src: local('A'), url('../fonts/Eyesome-Script.otf') format('otf');
-}
-
-@font-face {
   font-family: 'WindSong';
   font-style: normal;
   font-weight: 500;
@@ -89,7 +47,7 @@
 }
 
 :root {
-  --th-color-brown: #916953;
+  --th-color-brown: #D6C8BF;
   --th-color-white: #FFFFFF;
   --th-color-black: #000000;
   --th-color-green: #83B692;
@@ -100,13 +58,15 @@
   --th-color-beige: #CBB2A3;
   --th-color-cream: #FAF6F5;
   --bs-link-color: #2aa3b1;
+  --th-color-olive: #C3CBBD;
+  --th-color-forest: #22311d;
 
   --heading-font-family: "Cormorant SC", sans-serif;
   --heading-font-weight: 600;
   --subheading-font-family: "Cormorant SC", sans-serif;
   --subheading-font-weight: 400;
   --navbar-font-family: "Lustria", sans-serif;
-  --quote-font-family: "Playfair Display", sans-serif;
+  --quote-font-family: "Lustria", sans-serif;
   --bs-body-font-family: "Lustria", sans-serif;
   --bs-body-font-weight: 400;
   --title-font-family: "WindSong", serif;
@@ -119,6 +79,8 @@
 .background {
   background-color: var(--th-color-cream);
 }
+
+
 
 h1 {
   font-family: var(--heading-font-family);
@@ -133,11 +95,11 @@ h1 {
   font-weight: var(--heading-font-weight);
   text-align: center;
   align-items: center;
-  color: #FFF;
   letter-spacing: 3px;
   margin-top: 10px;
   margin-bottom: 0px;
-  font-size: 45px;
+  font-size: 3.1rem;
+  color: var(--th-color-black);
 }
 
 .h3-logo {
@@ -145,20 +107,43 @@ h1 {
   font-weight: var(--subheading-font-weight);
   text-align: center;
   align-items: center;
-  color: #FFF;
+  color: #000;
   margin-top: 5px;
   margin-bottom: 10px;
-  font-size: 27.5px;
+  font-size: 1.8rem;
 }
 
-.h2 {
+.card-dark {
+  background-color: var(--th-color-forest);
+  color: var(--th-color-white);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  text-align: center;
+}
+
+.script {
   font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  text-align: center;
+  align-items: center;
+  color: var(--th-color-black);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 p {
   font-family: var(--bs-body-font-family);
   font-weight: var(--bs-body-font-weight);
+  text-align: justify;
+}
+
+.card-header {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
   text-align: center;
+  background-color: var(--th-color-forest);
+  color: var(--th-color-white);
 }
 
 header {
@@ -212,7 +197,8 @@ header ul li:hover {
 .quote {
   font-family: var(--quote-font-family);
   font-weight: 400;
-  font-size: calc(0.75rem + 0.5vw);
+  font-size: calc(0.5rem + 0.4vw);
+  text-align: justify;
 }
 
 figcaption {
@@ -380,15 +366,13 @@ em {
   padding-bottom: 1rem;
 }
 
-
 blockquote {
   font-family: var(--quote-font-family);
+  font-style: italic;
+  color: var(--th-color-black);
   position: relative;
-  margin: -30;
   padding: 55px 75px 60px 75px;
   line-height: 1.4;
-  font-size: 1em;
-  color: var(--th-color-black);
 }
 
 blockquote:before {
@@ -400,8 +384,9 @@ blockquote:before {
   top: 0;
   left: 0;
   margin-bottom: 1rem;
-  content: open-quote;
+  content: "\201C";
 }
+
 blockquote:after {
   font-family: "Georgia", sans-serif;
   position: absolute;
@@ -411,6 +396,17 @@ blockquote:after {
   right:0;
   bottom:-0.5em;
   content: close-quote;
+}
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
 }
 
 .mobile-menu {
@@ -438,7 +434,7 @@ blockquote:after {
 }
 
 /* Pull up  */
-.pullUp a:before
+/* .pullUp a:before
 {
     position: absolute;
     width: 100%;
@@ -448,12 +444,12 @@ blockquote:after {
     content: '';
     background: #FFF;
     opacity: 0.3;
-}
+} */
 
-.pullUp a:hover:before
+/* .pullUp a:hover:before
 {
     height: 100%;
-}
+} */
 
 
 .btn-primary {
@@ -493,7 +489,6 @@ h1.heading {
 
 .card {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-img {
@@ -526,7 +521,7 @@ footer {
   text-align: center;
   font-size: calc(0.75rem + 0.25vw);
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 3rem;
   font-family: var(--navbar-font-family);
   font-weight: var(--heading-font-weight);
 }
@@ -578,6 +573,32 @@ img {
   background-size: cover;
   loading: lazy;
   max-width: 100%;
+}
+
+
+.decor-card-title {
+  background-color: var(--th-color-olive);
+  color: var(--th-color-black);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  text-align: center;
+}
+
+.decor-card {
+  background-color: var(--th-color-cream);
+  color: var(--th-color-black);
+  font-family: var(--bs-body-font-family);
+  font-weight: var(--bs-body-font-weight);
+  text-align: center;
+}
+
+.card-text {
+  font-size: calc(0.5rem + 0.5vw);
+  text-align: justify;
+}
+
+.card-subtitle {
+  color: var(--th-color-cream)
 }
 
 .template-about {
@@ -747,7 +768,7 @@ p {
 
 a:hover {
   text-decoration: underline;
-  color: var(--th-color-lavender);
+  color: var(--th-color-blue-gray);
   font-weight: 700;
 }
 
@@ -778,10 +799,10 @@ section {
 }
 
 @media screen and (min-width: 1200px){
-  
+/*   
   .row {
     flex-direction: row;
-  }
+  } */
 
   .col-12 {
     margin: 0.5rem 0. 0.5rem 0;
@@ -806,11 +827,7 @@ section {
     font-size: 1em;
     color: var(--th-color-black);
   }
-
-  .row {
-    flex-direction: column;
-  }
-
+/* 
   .col-12 {
     width: 80%;
     padding: 0.25rem;
@@ -822,7 +839,7 @@ section {
 
   .col-md-6 {
     width: 100%;
-  }
+  } */
 
   .scroll-li {
     font-size: calc(0.5rem + 0.25vw);
