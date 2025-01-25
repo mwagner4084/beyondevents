@@ -1,12 +1,24 @@
-function toggleMobileMenu(menu) {
-  menu.classList.toggle('open');
+function toggleMenu() {
+  let menu = document.getElementById("fullscreen-nav");
+  menu.classList.toggle("active");
 }
 
-$(document).ready(function(){
-	$('#menu-icon').click(function(){
-		$('.site-header').toggleClass('open');
-	});
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("menu-icon").addEventListener("click", toggleMenu);
+  document.querySelector(".close-btn").addEventListener("click", toggleMenu);
 });
+
+
+$(document).ready(function(){
+  $('#menu-icon').click(function(){
+      toggleMenu();
+  });
+
+  $('.close-btn').click(function(){
+      toggleMenu();
+  });
+});
+
 
 const cards = document.querySelectorAll(".card-gallery");  // Changed class from '.card' to '.card-gallery'
 
