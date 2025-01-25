@@ -135,8 +135,17 @@ class ContactPageView(TemplateView):
             context['form'] = form
             return render(request, self.template_name, context)
 
-
 class ConfirmPageView(TemplateView):
     """ Confirmation page view. """
 
     template_name = "confirm.html"
+
+class DOCPageView(TemplateView):
+    """ DOC page view. """
+
+    template_name = "doc-package.html"
+
+class PlanningPackagePageView(TemplateView):
+    """ Planning Package page view. """
+
+    template_name = "planning-package.html"

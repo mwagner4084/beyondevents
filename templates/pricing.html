@@ -5,123 +5,196 @@
 
 {% block content %}
 
-<div>
-    <div class="container py-3">
-        <div class="row justify-content-md-center align-items-center">
-            <div class="col-12 col-md-8">
-                <div class="card border-dark slide-in-left mb-md-0">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">
-                            Our Comprehensive Day-of Coordination Package
-                        </h3>
-                        <hr>
-                        <h3 class="card-subtitle mb-2 text-muted">
-                            What to expect:
-                        </h3>
-                        <ul class="list-unstyled rte">
-                            <li>
-                                - Unlimited virtual consultations
-                            </li>
-                            <li>
-                                - Management + coordination of vendors
-                            </li>
-                            <li>
-                                - Execution of event set-up and dismantling
-                            </li>
-                            <li>
-                                - Creation + management of event timeline
-                            </li>
-                            <li>
-                                - Aesthetic arrangement of reception, cocktail hour, and ceremony
-                            </li>
-                            <li>
-                                - Delivery of desserts on the day of the event
-                            </li>
-                            <li>
-                                - Participation in vendor/venue meetings
-                            </li>
-                            <li>
-                                - First to arrive and the last to depart
-                            </li>
-                            <li>
-                                - Placement of cards/gifts in your vehicle
-                            </li>
-                            <li>
-                                - On-site rehearsal coordination
-                            </li>
-                            <li>
-                                - Primary liaison between you and vendors
-                            </li>
-                            <li>
-                                - Emergency kit for unforeseen events
-                            </li>
-                            <li>
-                                - Hands-on assistance with each vendor on the day of the event
-                            </li>
-                        </ul>
-                    </div>
+
+<div class="container py-3">
+    <div class="row row-cols-1 g-3 mx-auto my-auto">
+        <div class="col-lg-12 my-3">
+            <div class="card card-dark border-dark">
+                <div class="card-body text-center">
+                    <div class="h1-logo text-white">PRICING GUIDE</div>
                 </div>
             </div>
         </div>
-        <br>
-        <h2 class="text-center">
-            2025 PRICING COMING SOON.
-        </h2>
-        {% comment %} <hr>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <div class="card border-dark slide-in-left h-100">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">
-                            Promo Doc Package: $1,750
-                        </h4>
-                        <h5 class="card-subtitle mb-2 text-muted">
-                            Offer valid through 12/31/2023
-                        </h5>
+    </div>
+
+    <div class="row row-cols-1 g-3 mx-auto my-auto">
+        <div class="col-lg-12 my-3">
+            <div class="card decor-card border-dark">
+                
+                <!-- FLEXBOX CONTAINER -->
+                <div class="d-flex text-center align-items-stretch">
+                    
+                    <!-- Section 1: DOC -->
+                    <div class="flex-fill p-3 border-end d-flex flex-column">
+                        <div class="doc-title text-beige">DOC</div>
                         <hr>
-                        <p>
-                            In an effort to re-establish our presence and reputation in the event planning industry after a summer hiatus, we are pleased to offer a promotional package. This special pricing is designed to reintroduce the high caliber of our services to you and your network. Our ultimate goal is to foster a strong word-of-mouth reputation among you, your friends, and your family, thereby contributing positively to this vibrant industry.
-                        </p>
+                        <ul class="list-unstyled ul-pkg rte flex-grow-1">
+                            <li>UNLIMITED VIRTUAL MEETINGS</li>
+                            <li>DECOR MEETINGS</li>
+                            <li>VENDOR COORDINATION</li>
+                            <li>TIMELINE CREATION</li>
+                            <li>ADDITIONAL COORDINATOR</li>
+                            <li>LIVE DOCUMENTS</li>
+                            <li>REHEARSAL COORDINATION</li>
+                            <li>SET UP &amp; TEAR DOWN</li>
+                            <li>UNLIMITED DAY-OF HOURS</li>
+                        </ul>
+                        <div class="card-footer h3-logo">
+                            PRICE: $2,750
+                        </div>
+                        <img class="card-img-bottom my-2" src="{% static 'img/couple-kiss.png' %}" alt="Wedding Couple Kiss" loading="lazy">
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <div class="card border-dark slide-in-left h-100">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">
-                            Doc Package 2024: $2,999
-                        </h4>
-                        <h5 class="card-subtitle mb-2 text-muted">
-                            Applicable for weddings planned 12 months or less in advance
-                        </h5>
+
+                    <!-- Section 2: DAY OF COORDINATION PACKAGES -->
+                    <div class="flex-fill p-3 border-end d-flex flex-column justify-content-between">
+                        <div class="doc-title text-beige">DAY OF<br>COORDINATION<br>PACKAGES</div>
+                        <br>
+                        <a href="{% url 'doc-package' %}" class="pkg-link">Coordination Package</a>
+                        <a href="{% url 'planning-package' %}" class="pkg-link">Planning Package</a>
+                        <br>
+                        <img class="card-img-bottom my-2" src="{% static 'img/florals-green.png' %}" alt="Candle Wedding Rentals" loading="lazy">
+                    </div>
+                    
+
+                    <!-- Section 3: VIP DOC -->
+                    <div class="flex-fill p-3 d-flex flex-column">
+                        <div class="doc-title text-beige">VIP DOC</div>
                         <hr>
-                        <p>
-                            Our role is to provide comprehensive guidance throughout your wedding planning journey. We will take the lead in ensuring your comfort and confidence in every aspect of the process. Leveraging our extensive experience and specialized expertise in the industry, we aim to make your wedding planning experience as seamless and enjoyable as possible.
-                        </p>
+                        <ul class="list-unstyled ul-pkg rte flex-grow-1">
+                            <li>SOURCE DECOR &amp; VENDORS</li>
+                            <li>BUDGET MANAGEMENT</li>
+                            <li>VENDOR COORDINATION</li>
+                            <li>VENDOR MEETINGS</li>
+                            <li>COMPLIMENTARY RENTALS</li>
+                            <li>VISION BOARDS</li>
+                            <li>DESSERT PICK-UP</li>
+                        </ul>
+                        <div class="card-footer h3-logo">
+                            PRICE: $5,500
+                        </div>
+                        <img class="card-img-bottom my-2" src="{% static 'img/edensmore.png' %}" alt="Candle Wedding Rentals" loading="lazy">
                     </div>
-                </div>
+
+                </div> <!-- END FLEX CONTAINER -->
+
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <div class="card border-dark slide-in-left h-100">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">
-                            VIP Package DOC: $3,500
-                        </h4>
-                        <h5 class="card-subtitle mb-2 text-muted">
-                            Applicable for weddings planned 13 months+ in advance
-                        </h5>
-                        <hr>
-                        <p>
-                            Embarking on this journey from the very beginning, we will explore potential venues together and begin to craft the vision for your wedding. This early engagement allows us to initiate the planning process promptly, ensuring every detail is meticulously considered and executed.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> {% endcomment %}
+        </div>
+    </div>
+
+    <div class="h1-logo text-center my-3">
+        Booking 2025 &amp; 2026 now!
     </div>
 </div>
 
 
+
+
+
+
+    {% comment %} <div class="row row-cols-md-3 g-2 mx-auto my-3">
+        <div class="col col-md-4">
+            <div class="title">
+                DOC
+            </div>
+            <hr>
+            <ul class="list-unstyled rte">
+                <li>
+                    UNLIMITED VIRTUAL MEETINGS
+                </li>
+                <li>
+                    DECOR MEETINGS
+                </li>
+                <li>
+                    VENDOR COORDINATION
+                </li>
+                <li>
+                    TIMELINE CREATION
+                </li>
+                <li>
+                    ADDITIONAL COORDINATOR
+                </li>
+                <li>
+                    LIVE DOCUMENTS
+                </li>
+                <li>
+                    REHEARSAL COORDINATION
+                </li>
+                <li>
+                    SET UP &amp; TEAR DOWN
+                </li>
+                <li>
+                    UNLIMITED DAY-OF HOURS
+                </li>
+            </ul>
+            <div class="h3-logo text-center my-3">
+                <small class="text-muted">
+                    PRICE: $2,750
+                </small>
+            </div>
+        </div>
+
+        <div class="d-flex" style="height: 200px;">
+            <div class="vr"></div>
+        </div>
+
+        <div class="col col-md-4">
+            <div class="title">
+                DAY OF COORDINATION PACKAGES
+            </div>
+            <hr>
+            <a href="{% url 'doc-package' %}" class="link">
+                Coordination Package
+            </a>
+            <a href="{% url 'planning-package' %}" class="link">
+                Planning Package
+            </a>
+        </div>
+
+        <div class="d-flex" style="height: 200px;">
+            <div class="vr"></div>
+        </div>
+        
+        <div class="col col-md-4">    
+            <div class="title">
+                VIP DOC
+            </div>
+            <hr>
+            <ul class="list-unstyled rte">
+                <li>
+                    SOURCE DECOR &amp; VENDORS
+                </li>
+                <li>
+                    BUDGET MANAGEMENT
+                </li>
+                <li>
+                    VENDOR COORDINATION
+                </li>
+                <li>
+                    VENDOR MEETINGS
+                </li>
+                <li>
+                    COMPLIMENTARY RENTALS
+                </li>
+                <li>
+                    VISION BOARDS
+                </li>
+                <li>
+                    DESSERT PICK-UP
+                </li>
+                </ul>
+            <div class="h3-logo text-center my-3">
+                <small class="text-muted">
+                    PRICE: $5,500
+                </small>
+            </div>
+        </div>
+    </div> 
+    <div class="h1-logo text-center my-3">
+        Booking 2025 &amp; 2026 now!
+    </h2>
+</div>
+
+{% endcomment %}
 
 
 

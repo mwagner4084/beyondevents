@@ -2,9 +2,11 @@ from django.urls import path
 
 from .views import (AboutPageView, ConfirmPageView, ContactPageView,
                     GalleryPageView, HomePageView, PricingPageView,
-                    TestimonialsPageView, RentalsPageView)
+                    TestimonialsPageView, RentalsPageView, DOCPageView, PlanningPackagePageView)
 
 urlpatterns = [
+    path("doc-package/", DOCPageView.as_view(), name="doc-package"),
+    path("planning-package/", PlanningPackagePageView.as_view(), name="planning-package"),
     path("confirm/", ConfirmPageView.as_view(), name="confirm"),
     path("rentals/", RentalsPageView.as_view(), name="rentals"),
     path("gallery/", GalleryPageView.as_view(), name="gallery"),
