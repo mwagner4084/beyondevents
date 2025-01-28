@@ -132,7 +132,6 @@ header {
   align-items: center;
   text-align: center;
   background-color: var(--th-color-beige);
-  margin-bottom: 20px;
 }
 
 header a {
