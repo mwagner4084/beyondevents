@@ -342,9 +342,7 @@ a.inline {
     text-align: center;
     align-items: center;
     color: var(--th-color-brown);
-    letter-spacing: 3px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    letter-spacing: 2px;
     font-size: calc(0.6rem + 0vh);
   }
 
@@ -437,9 +435,7 @@ a.inline {
     text-align: center;
     align-items: center;
     color: var(--th-color-brown);
-    letter-spacing: 3px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    letter-spacing: 2px;
     font-size: calc(0.75rem + 0vh);
   }
 
@@ -551,9 +547,7 @@ a.inline {
     text-align: center;
     align-items: center;
     color: #FFF;
-    letter-spacing: 3px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    letter-spacing: 2px;
     font-size: calc(1rem + 0.5vh);
   }
 
