@@ -521,6 +521,13 @@ a.inline {
     font-family: var(--heading-font-family);
     text-align: center;
   }
+
+  .link {
+    text-decoration: underline;
+    color: var(--bs-link-color);
+    font-size: calc(1rem + 0.5vw);
+    margin: auto;
+  }
 }
 
 /* CSS */
