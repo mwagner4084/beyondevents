@@ -57,7 +57,7 @@
   --th-color-lavender: #63477a;
   --th-color-beige: #D8CCC4;
   --th-color-cream: #FAF6F5;
-  --bs-link-color: #8FA093;
+  --bs-link-color: #22311d;
   --th-color-olive: #C3CBBD;
   --th-color-forest: #22311d;
 
@@ -286,7 +286,13 @@ a.inline {
   .h4 {
     font-family: var(--subheading-font-family);
     font-weight: var(--subheading-font-weight);
-    font-size: calc(0.5rem + 0.5vh);
+    font-size: calc(0.7rem + 0.5vh);
+  }
+
+  .card-text {
+    font-size: calc(0.5rem + 0.25vw);
+    text-align: justify;
+    font-family: var(--bs-body-font-family);
   }
 
   .card-footer {
@@ -401,6 +407,12 @@ a.inline {
     font-size: calc(0.8rem + 0.1vh);
   }
 
+  .card-text {
+    font-size: calc(0.5rem + 0.5vw);
+    text-align: justify;
+    font-family: var(--bs-body-font-family);
+  }
+
   p {
     font-size: calc(0.6rem + 0.5vw);
   }
@@ -485,6 +497,11 @@ a.inline {
     font-size: calc(1rem + 0.25vw);
   }
 
+  .card-text {
+    font-size: calc(0.8rem + 0.25vw);
+    text-align: justify;
+    font-family: var(--bs-body-font-family);
+  }
 
   .bride-title {
     font-size: calc(1.5rem + 0.08vw);
@@ -528,6 +545,8 @@ a.inline {
     font-size: calc(1rem + 0.5vw);
     margin: auto;
   }
+
+
 }
 
 /* CSS */
@@ -592,6 +611,7 @@ a.inline {
 
 .text-beige {
   color: var(--th-color-brown);
+  font-weight: bold;
 }
 
 h1 {
@@ -654,43 +674,6 @@ p {
   color: var(--th-color-white);
 }
 
-
-
-/* #menu-icon:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  transition: 1s ease;
-} */
-
-/* #menu-icon:focus {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  transition: 1s ease;
-} */
-
-
-
-/* #menu-icon {
-  width: 60px;
-  height: 45px;
-  left: 0;
-  position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-} */
 
 #logo {
   width: 35px;
@@ -907,12 +890,6 @@ img {
   text-align: center;
 }
 
-.card-text {
-  font-size: calc(0.8rem + 0.25vw);
-  text-align: justify;
-  font-family: var(--bs-body-font-family);
-}
-
 .card-subtitle {
   color: var(--th-color-cream)
 }
@@ -1055,7 +1032,7 @@ ul, il {
 
 a:hover {
   text-decoration: underline;
-  color: var(--th-color-forest);
+  color: var(--th-color-green);
   font-weight: 700;
 }
 
@@ -1071,23 +1048,6 @@ section {
   flex-direction: column;
   justify-content: flex-start;
 }
-
-/* @media screen and (min-width: 768px){
-  .col-md-6 {
-    width: 100%;
-  }
-
-  .col-md-4 {
-    width: 50%;
-  }
-
-  .site-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-} */
-
 
 .bride-img {
   width: 100%;
@@ -1401,64 +1361,6 @@ section {
           animation: slide-in-fwd-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-
-.codepen-button {
-  display: block;
-  cursor: pointer;
-  color: var(--th-color-white);
-  background-color: var(--th-color-black);
-  margin: auto;
-  position: relative;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  overflow: hidden;
-  padding: 3px;
-  isolation: isolate;
-  text-align: center;
-  font-family: var(--heading-font-family);
-  width: 90%;
-  top: 10px;
-  bottom: 20px;
-  left: 0;
-}
-
-.codepen-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(115deg,#6096ba,#9f86c0,#87c38f,#bbd0ff,#ea9ab2);
-  background-size: 25% 100%;
-  /* animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
-  animation-play-state: paused;
-  translate: -5% 0%;
-  transition: translate 0.25s ease-out; */
-}
-
-/* .codepen-button:hover::before {
-  animation-play-state: running;
-  transition-duration: 0.75s;
-  translate: 0% 0%;
-} */
-
-/* @keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
-  to {
-    transform: translateX(-25%);
-  }
-} */
-
-.codepen-button span {
-  position: relative;
-  display: block;
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  background: #000;
-  border-radius: 3px;
-  height: 100%;
-}
 
 
 
