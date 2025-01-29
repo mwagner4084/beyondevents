@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-login.php
+Disallow: /wp-signup.php
+Disallow: /wp-trackback
+Disallow: /xmlrpc.php
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /search/
+Disallow: /?s=
+Disallow: /author/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /backup/
+
+Allow: /wp-content/uploads/
+
+Sitemap: https://beyondeventsllc.com/sitemap.xml
