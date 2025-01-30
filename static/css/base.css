@@ -106,6 +106,8 @@
 
 .navbar-logo-overlay {
   margin: auto;
+  width: 100%;
+  max-width: 200px;
 }
 
 .logo {
@@ -157,7 +159,7 @@ header ul a {
   display: flex;
   text-decoration: none;
   color: var(--th-color-black);
-  font-size: calc(0.75rem + 0.25vw);
+  font-size: calc(0.75rem + 0.5vw);
   text-align: center;
 }
 
@@ -178,7 +180,8 @@ header ul li:hover {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  font-size: calc(1rem + 1vh);
+  background-color: var(--th-color-forest);
   overflow-x: hidden;
   transition: all 0.5s ease-in-out;
   text-align: center;
@@ -211,6 +214,7 @@ header ul li:hover {
   color: white;
   display: block;
   transition: 0.3s;
+  font-size: calc(1rem + 1vh);
 }
 
 /* Hover effect */
@@ -273,14 +277,14 @@ a.inline {
     font-weight: var(--heading-font-weight);
     text-align: center;
     letter-spacing: 3px;
-    font-size: calc(0.8rem + 0.1vh);
+    font-size: calc(1rem + 0vh);
   }
 
   h3 {
     font-family: var(--subheading-font-family);
     font-weight: var(--subheading-font-weight);
     text-align: center;
-    font-size: calc(1rem + 0vh);
+    font-size: calc(0.8rem + 0.5vh);
   }
 
   .h4 {
@@ -289,9 +293,15 @@ a.inline {
     font-size: calc(0.7rem + 0.5vh);
   }
 
+  .h5 {
+    font-family: var(--subheading-font-family);
+    font-weight: bold;
+    font-size: calc(1rem + 0vh);
+  }
+
   .card-text {
-    font-size: calc(0.5rem + 0.25vw);
-    text-align: justify;
+    font-size: calc(0.5rem + 1vw);
+    text-align: center;
     font-family: var(--bs-body-font-family);
   }
 
@@ -346,7 +356,7 @@ a.inline {
   }
 
   .ul-pkg {
-    font-size: calc(0.5rem + -0.1vw);
+    font-size: calc(0.5rem + 0.5vw);
   }
 
 }
@@ -404,12 +414,16 @@ a.inline {
   .h4 {
     font-family: var(--subheading-font-family);
     font-weight: var(--subheading-font-weight);
-    font-size: calc(0.8rem + 0.1vh);
+    font-size: calc(0.8rem + 0.5vh);
+  }
+
+  .h5 {
+    font-size: calc(1.3rem + 0.5vh);
   }
 
   .card-text {
-    font-size: calc(0.5rem + 0.5vw);
-    text-align: justify;
+    font-size: calc(0.6rem + 0.75vw);
+    text-align: center;
     font-family: var(--bs-body-font-family);
   }
 
@@ -426,7 +440,7 @@ a.inline {
   }
 
   .ul-pkg {
-    font-size: calc(0.5rem + 0.3vw);
+    font-size: calc(0.5rem + 0.75vw);
   }
 
   .doc-img {
@@ -441,7 +455,7 @@ a.inline {
   .link {
     text-decoration: underline;
     color: var(--bs-link-color);
-    font-size: calc(0.75rem + 0vw);
+    font-size: calc(1rem + 1vw);
   }
 
   .pkg-link {
@@ -499,7 +513,7 @@ a.inline {
 
   .card-text {
     font-size: calc(0.8rem + 0.25vw);
-    text-align: justify;
+    text-align: center;
     font-family: var(--bs-body-font-family);
   }
 
@@ -528,7 +542,7 @@ a.inline {
   }
 
   .ul-pkg {
-    font-size: calc(0.75rem + 0.3vw);
+    font-size: calc(0.75rem + 0.5vw);
   }
 
   .pkg-link {
@@ -551,16 +565,16 @@ a.inline {
 
 /* CSS */
 .button-56 {
+  font-family: var(--bs-body-font-family);
   align-items: center;
   background-color: var(--th-color-green);
-  border: 2px solid #111;
+  border: 2px solid var(--th-color-forest);
   border-radius: 8px;
   box-sizing: border-box;
   color: #FFF;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   height: 48px;
   justify-content: center;
   line-height: 24px;
@@ -575,7 +589,7 @@ a.inline {
 }
 
 .button-56:after {
-  background-color: #111;
+  background-color: var(--th-color-forest);
   border-radius: 8px;
   content: "";
   display: block;
@@ -600,6 +614,8 @@ a.inline {
 
 .button-56:hover {
   outline: 0;
+  background-color: var(--th-color-forest);
+  color: #FFF;
 }
 
 @media (min-width: 768px) {
@@ -654,7 +670,7 @@ p {
 .quote {
   font-family: var(--quote-font-family);
   font-weight: 400;
-  font-size: calc(0.5rem + 0.4vw);
+  font-size: calc(0.7rem + 0.5vw);
   text-align: left;
 }
 
@@ -846,7 +862,7 @@ img {
 }
 
 .headshot {
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius: 5%;
   margin: auto;
@@ -972,7 +988,7 @@ img {
 }
 
 .gallery {
-  --g: 8px;
+  --g: 3px;
   /* the gap */
   --s: 100%;
   /* the size */
@@ -985,7 +1001,7 @@ img {
   grid-area: 1/1;
   justify-self: center;
   align-self: center;
-  width: 70%;
+  width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
