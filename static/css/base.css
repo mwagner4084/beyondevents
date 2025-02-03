@@ -57,8 +57,8 @@
   --th-color-lavender: #63477a;
   --th-color-beige: #D8CCC4;
   --th-color-cream: #FAF6F5;
-  --bs-link-color: #22311d;
-  --th-color-olive: #C3CBBD;
+  --bs-link-color: #C3CBBD;
+  --th-color-olive: #8FA093;
   --th-color-forest: #22311d;
 
   --heading-font-family: "Cormorant SC", sans-serif;
@@ -257,10 +257,6 @@ header ul li:hover {
   z-index: 10000;
 }
 
-a.inline {
-  display: contents;
-}
-
 
 @media screen and (max-width: 500px) {
   h1 {
@@ -268,7 +264,7 @@ a.inline {
     font-weight: var(--heading-font-weight);
     text-align: center;
     letter-spacing: 3px;
-    font-size: calc(1rem + 0.1vh);
+    font-size: calc(1.3rem + 1vh);
     line-height: 1; 
   }
 
@@ -296,11 +292,17 @@ a.inline {
   .h5 {
     font-family: var(--subheading-font-family);
     font-weight: bold;
-    font-size: calc(1rem + 0vh);
+    font-size: calc(1rem + 1vh);
   }
 
   .card-text {
-    font-size: calc(0.5rem + 1vw);
+    font-size: calc(0.6rem + 1vw);
+    text-align: left;
+    font-family: var(--bs-body-font-family);
+  }
+
+  .rental-text {
+    font-size: calc(0.6rem + 0vw);
     text-align: center;
     font-family: var(--bs-body-font-family);
   }
@@ -322,9 +324,9 @@ a.inline {
   }
 
   .link {
-    text-decoration: underline;
     color: var(--bs-link-color);
     font-size: calc(0.75rem + 0.5vw);
+    font-weight: 700;
   }
 
   .doc-img {
@@ -357,6 +359,11 @@ a.inline {
 
   .ul-pkg {
     font-size: calc(0.5rem + 0.5vw);
+  }
+
+  .card-body {
+    text-align: justify;
+    margin: 0;
   }
 
 }
@@ -427,6 +434,16 @@ a.inline {
     font-family: var(--bs-body-font-family);
   }
 
+  .rental-text {
+    font-size: calc(0.8rem + 0.25vw);
+    text-align: center;
+    font-family: var(--bs-body-font-family);
+  }
+
+  .card-footer {
+    font-size: calc(1rem + 0.5vh);
+  }
+
   p {
     font-size: calc(0.6rem + 0.5vw);
   }
@@ -453,9 +470,9 @@ a.inline {
   }
 
   .link {
-    text-decoration: underline;
     color: var(--bs-link-color);
     font-size: calc(1rem + 1vw);
+    font-weight: 700;
   }
 
   .pkg-link {
@@ -507,6 +524,10 @@ a.inline {
     font-size: calc(1rem + 0.25vh);
   }
 
+  .h5 {
+    font-size: calc(1.3rem + 1vh);
+  }
+
   p {
     font-size: calc(1rem + 0.25vw);
   }
@@ -515,6 +536,10 @@ a.inline {
     font-size: calc(0.8rem + 0.25vw);
     text-align: center;
     font-family: var(--bs-body-font-family);
+  }
+
+  .card-footer {
+    font-size: calc(1rem + 0.5vh);
   }
 
   .bride-title {
@@ -554,10 +579,10 @@ a.inline {
   }
 
   .link {
-    text-decoration: underline;
     color: var(--bs-link-color);
     font-size: calc(1rem + 0.5vw);
     margin: auto;
+    font-weight: 700;
   }
 
 
@@ -628,14 +653,6 @@ a.inline {
 .text-beige {
   color: var(--th-color-brown);
   font-weight: bold;
-}
-
-h1 {
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  text-align: center;
-  align-items: center;
-  font-weight: 700;
 }
 
 
@@ -778,12 +795,6 @@ blockquote p {
   width: 100%;
   text-align: center;
   display: block;
-}
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: calc(1.25rem + 0.5vw);
 }
 
 h1.heading {
@@ -1048,8 +1059,8 @@ ul, il {
 
 a:hover {
   text-decoration: underline;
-  color: var(--th-color-green);
-  font-weight: 700;
+  color: var(--th-color-forest);
+  font-weight: 600;
 }
 
 section {
@@ -1059,7 +1070,6 @@ section {
 }
 
 .card-body {
-  margin: 0 1px 0 1px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

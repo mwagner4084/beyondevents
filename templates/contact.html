@@ -5,34 +5,31 @@
 
 {% block content %}
 
-<div>
     <div class="container py-3">
-        <div class="row my-3">
-            <div class="col-12 col-md-10 mx-auto mb-md-0 position-relative">
-                <div class="card h-100">
-                    <div class="position-relative">
-                        <div class="card-header">
-                            <img src="{%static 'favicon/logo-contact.png'%}" class="home-img mx-auto my-auto" alt="Beyond Events Wedding Planning and Rentals" loading="lazy">
+        <div class="row row-cols-1 g-3 mx-auto my-auto">
+            <div class="col">
+                <div class="card card-dark border-dark">
+                    <div class="card-body text-center">
+                        <div class="h1 text-white">
+                            Contact Our Team
                         </div>
-                        <div class="card-body text-center">
-                            <p class="h4">
-                                Complete the provided form below, and we will get back to you as soon as possible.
-                                Be sure to include your wedding date, location, and any other details you would like to share.
-                                We look forward to working with you to make your dreams a reality!
-                            </p>
+                        <hr>
+                        <div class="h4">
+                            Please complete the provided form below, and we will get back to you as soon as possible.
+                            Be sure to include your wedding date, location, and any other details you would like to share.
+                            We look forward to working with you to make your dreams a reality!
                         </div>
-                        {% comment %} <img src="{% static 'img/cake.png' %}" alt="cake" class="card-img-bottom" loading="lazy"> {% endcomment %}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-10 mx-auto mb-md-0">
-                <div class="card h-100">
-                    <div class="card-header">
-                        <h3 class="display-6">
+        <div class="row row-cols-1 g-3 mx-auto my-auto">
+            <div class="col">
+                <div class="card border-dark">
+                    <div class="card-body text-center">
+                        <div class="h2">
                             Let's get started
-                        </h3>
+                        </div>
                     </div>
                     <div class="card-body d-block">
                         {% crispy form %}

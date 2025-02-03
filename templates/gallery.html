@@ -6,53 +6,57 @@
 {% block content %}
 
 
-<div class="desktop-img mobile-img">
-    <div class="container mx-md-auto pb-3">
-        <div class="card card-dark my-3">
-            <div class="card-body text-center">
-                <img src="{%static 'favicon/logo-gallery.png'%}" class="home-img mx-auto my-auto" alt="Beyond Events Wedding Planning and Rentals" loading="lazy">
+<div class="container">
+    <div class="row row-cols-1 g-3 mx-auto my-auto">
+        <div class="col">
+            <div class="card card-dark border-dark">
+                <div class="card-body text-center">
+                    <div class="h1 text-white">
+                        Gallery Images
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="scroll-gallery h-100">
-            <ul class="scroll-ul">
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-disco.png'%}" alt="disco balls" class="scroll-img" loading="lazy"/>
-                    Modern
-                    </li>
-                <li class="scroll-li">
-                    <img src="{% static 'img/weddings/wedding-donuts.png'%}" alt="glassware" class="scroll-img h-100" loading="lazy" />
-                    Playful
+    </div>
+    <div class="scroll-gallery h-100 my-3">
+        <ul class="scroll-ul">
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-disco.png'%}" alt="disco balls" class="scroll-img" loading="lazy"/>
+                Modern
                 </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-juice.png'%}" alt="flowers" class="scroll-img" loading="lazy" />
-                    Garden
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-barn.png'%}" alt="tableware" class="scroll-img" loading="lazy" />
-                    Rustic
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-bride.png'%}" alt="juice" class="scroll-img" loading="lazy" /> 
-                    Glam
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-cake.png'%}" alt="salad" class="scroll-img" loading="lazy" />
-                    Minimalist
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-centerpiece.png'%}" alt="holiday" class="scroll-img" loading="lazy" />
-                    Romantic
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-chairs.png'%}" alt="cakestand" class="scroll-img" loading="lazy" />
-                    Eclectic
-                </li>
-                <li class="scroll-li"> 
-                    <img src="{% static 'img/weddings/wedding-florals.png'%}" alt="flowers" class="scroll-img" loading="lazy" />
-                    Boho
-                </li>
-            </ul>
-        </div>
+            <li class="scroll-li">
+                <img src="{% static 'img/weddings/wedding-donuts.png'%}" alt="glassware" class="scroll-img h-100" loading="lazy" />
+                Playful
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-juice.png'%}" alt="flowers" class="scroll-img" loading="lazy" />
+                Garden
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-barn.png'%}" alt="tableware" class="scroll-img" loading="lazy" />
+                Rustic
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-bride.png'%}" alt="juice" class="scroll-img" loading="lazy" /> 
+                Glam
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-cake.png'%}" alt="salad" class="scroll-img" loading="lazy" />
+                Minimalist
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-centerpiece.png'%}" alt="holiday" class="scroll-img" loading="lazy" />
+                Romantic
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-chairs.png'%}" alt="cakestand" class="scroll-img" loading="lazy" />
+                Eclectic
+            </li>
+            <li class="scroll-li"> 
+                <img src="{% static 'img/weddings/wedding-florals.png'%}" alt="flowers" class="scroll-img" loading="lazy" />
+                Boho
+            </li>
+        </ul>
     </div>
 </div> 
 
