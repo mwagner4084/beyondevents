@@ -57,7 +57,7 @@
   --th-color-lavender: #63477a;
   --th-color-beige: #D8CCC4;
   --th-color-cream: #FAF6F5;
-  --bs-link-color: #C3CBBD;
+  --bs-link-color: #708D77;
   --th-color-olive: #8FA093;
   --th-color-forest: #22311d;
 
@@ -499,7 +499,7 @@ header ul li:hover {
     font-weight: var(--heading-font-weight);
     text-align: center;
     letter-spacing: 3px;
-    font-size: calc(1.5rem + 0.25vh);
+    font-size: calc(2rem + 0.25vh);
     line-height: 1; 
   }
 
@@ -533,7 +533,7 @@ header ul li:hover {
   }
 
   .card-text {
-    font-size: calc(0.8rem + 0.25vw);
+    font-size: calc(1rem + 0.25vw);
     text-align: center;
     font-family: var(--bs-body-font-family);
   }
