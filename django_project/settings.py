@@ -31,7 +31,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "beyondeventsllc.com", "www.beyondeventsllc.com",
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "34.102.136.180", "34.102.136.181", "beyondeventsllc.com", "www.beyondeventsllc.com",
                  "containers-us-west-45.railway.app", "web-production-af58.up.railway.app", "web.railway.internal"]
 
 
@@ -88,7 +88,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_project.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
