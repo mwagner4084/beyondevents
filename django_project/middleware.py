@@ -5,7 +5,7 @@ class RedirectToWwwMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        host = request.get_host()
+        host = request.get_host().lower().split(':')[0]  # normalize
         if host == 'beyondeventsllc.com':
             return HttpResponsePermanentRedirect(f'https://www.beyondeventsllc.com{request.get_full_path()}')
         return self.get_response(request)
